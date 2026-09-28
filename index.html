@@ -34,7 +34,7 @@
   --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
 }
 body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.75;}
-.wrap{max-width:1100px;margin:0 auto;background:var(--cream);box-shadow:0 4px 60px rgba(0,0,0,0.09);}
+.wrap{width:100%;background:var(--cream);}
 
 /* ── HEADER asymétrique ── */
 .hero-header{background:var(--cream);padding:28px 48px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0;}
@@ -68,7 +68,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
 .sr-item:hover{color:var(--rose);}
 
 /* PAGES */
-.page{display:none;padding:48px 56px;min-height:500px;background:var(--cream);}
+.page{display:none;padding:48px clamp(20px,4vw,56px);min-height:500px;background:var(--cream);}
 .page.active{display:block;}
 .page-title{font-family:'Playfair Display',Georgia,serif;font-size:1.75em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:30px;padding-bottom:14px;border-bottom:1px solid var(--border);}
 .section-divider{border:none;border-top:1px solid var(--border);margin:44px 0;}
@@ -83,7 +83,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
 .convention-strip span{color:var(--sage);}
 .rdv-btn{display:inline-block;background:var(--rose);color:#fff;padding:11px 26px;border-radius:24px;text-decoration:none;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:0.04em;margin-top:15px;font-weight:500;transition:background .2s,transform .15s;}
 .rdv-btn:hover{background:#a04060;transform:translateY(-1px);}
-.home-img{width:100%;height:270px;object-fit:cover;border-radius:4px;}
+.home-img{width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:4px;}
 .home-services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
 .home-card{border-radius:14px;overflow:hidden;cursor:pointer;transition:box-shadow .25s,transform .2s;}
 .home-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.11);transform:translateY(-3px);}
@@ -210,7 +210,7 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
 #mapsIframe{width:100%;height:100%;border:none;min-height:340px;display:block;}
 .photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .photo-item{display:flex;flex-direction:column;gap:5px;}
-.cabinet-photo{width:100%;height:175px;object-fit:cover;border-radius:10px;border:1px solid var(--border);}
+.cabinet-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--border);}
 .photo-caption{font-family:sans-serif;font-size:11.5px;color:var(--muted);text-align:center;font-style:italic;}
 
 /* ──── PAGE 4 : GYNECO ──── */
@@ -487,7 +487,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 .map-ph-link:hover{color:var(--navy);border-color:var(--navy);}
 
 /* ── TEXTE JUSTIFIÉ mentions + confidentialité ── */
-#page-mentions p, #page-confidentialite p {text-align:justify;}
+#modal-mentions p, #modal-confidentialite p {text-align:justify;}
 </style>
 </head>
 <body>
@@ -543,7 +543,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       <a class="rdv-btn" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">Prendre rendez-vous sur Doctolib</a>
     </div>
     <!-- Remplacez Image_page_accueil.png par le nom exact de votre fichier -->
-    <img class="home-img" src="Image_page_accueil.png" alt="Consultation sage-femme" onerror="this.style.background='#e8f0e9';this.style.minHeight='270px';">
+    <img class="home-img" src="docs/Image_page_accueil.png" alt="Consultation sage-femme" onerror="this.style.background='#e8f0e9';this.style.minHeight='270px';">
   </div>
   <div class="home-services">
     <div class="home-card gyneco" onclick="this.classList.toggle('open')">
@@ -551,7 +551,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         <h3>Suivi gynécologique</h3>
         <div class="card-hint">↓ Cliquer pour les détails</div>
       </div>
-      <div class="home-card-body"><p>Contraception, dépistages, infections, IST, ménopause</p></div>
+      <div class="home-card-body"><p>Contraception, dépistages, infections, IST, douleurs pelviennes et périnéales, pré-ménopause, vaginisme</p></div>
     </div>
     <div class="home-card grossesse" onclick="this.classList.toggle('open')">
       <div class="home-card-header">
@@ -785,15 +785,15 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   <div class="photos-grid">
     <!-- Placez vos photos dans le même dossier que ce fichier HTML -->
     <div class="photo-item">
-      <img class="cabinet-photo" src="photo_cabinet_entree.jpeg" alt="Entrée" onerror="this.style.background='#e8f0e9';">
+      <img class="cabinet-photo" src="docs/photo_cabinet_entree.jpeg" alt="Entrée" onerror="this.style.background='#e8f0e9';">
       <span class="photo-caption">Entrée</span>
     </div>
     <div class="photo-item">
-      <img class="cabinet-photo" src="photo_cabinet_bureau.jpeg" alt="Mon bureau" onerror="this.style.background='#e8f0e9';">
+      <img class="cabinet-photo" src="docs/photo_cabinet_bureau.jpeg" alt="Mon bureau" onerror="this.style.background='#e8f0e9';">
       <span class="photo-caption">Mon bureau</span>
     </div>
     <div class="photo-item">
-      <img class="cabinet-photo" src="photo_cabinet_bureau2.jpeg" alt="Bureau voisin" onerror="this.style.background='#e8f0e9';">
+      <img class="cabinet-photo" src="docs/photo_cabinet_bureau2.jpeg" alt="Bureau voisin" onerror="this.style.background='#e8f0e9';">
       <span class="photo-caption">Bureau voisin</span>
     </div>
   </div>
@@ -879,14 +879,13 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         <strong style="color:var(--navy);display:block;margin-bottom:8px;">À la carte</strong>
         <p style="margin-bottom:10px;font-style:italic;color:var(--muted);">Le conjoint est le bienvenu également.</p>
         <ul>
-          <li>Séance 1 : Prémices du travail, quand partir à la maternité, gestion des contractions</li>
+          <li>Séance 1 : Quand partir à la maternité, gestion des contractions avec respiration, postures, ballon</li>
           <li>Séance 2 : Déroulement du travail — voie basse ou césarienne, respiration</li>
           <li>Séance 3 : Le périnée avant, pendant et après l'accouchement, exercices de poussée</li>
           <li>Séance 4 : Suites de couches, prendre soin de soi, RDV à prévoir</li>
           <li>Séance 5 : Mise en place de l'allaitement</li>
           <li>Séance 6 : Préparer l'arrivée du bébé — rythme, couchage, pleurs, premier mois</li>
-          <li>Séance 7 (avec conjoint) : Gérer le travail ensemble, respiration, postures, ballon</li>
-          <li>EPI-NO : Préparer le périnée avec la sonde</li>
+          <li>Séance 7 : EPI-NO / EMAGINA : Préparer le périnée avec une sonde</li>
         </ul>
       </div>
     </div>
@@ -952,7 +951,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
           Première consultation et prévention — auto-questionnaire à apporter le jour du RDV.
         </div>
         <div class="bilan-strip-links">
-          <a href="MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="docs/MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
           <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
@@ -968,7 +967,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
           Bilan de prévention et dépistages adaptés — auto-questionnaire à apporter le jour du RDV.
         </div>
         <div class="bilan-strip-links">
-          <a href="MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="docs/MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
           <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
@@ -986,7 +985,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         <tr><th>Vaccin</th><th>Indication principale</th><th>Population concernée</th></tr>
       </thead>
       <tbody>
-        <tr><td>HPV</td><td>Prévention des cancers du col de l'utérus et autres cancers HPV-induits</td><td>11–19 ans (rattrapage jusqu'à 26 ans)</td></tr>
+        <tr><td>HPV</td><td>Prévention des cancers du col de l'utérus</td><td>11 - 26 ans</td></tr>
         <tr><td>Méningocoques ACWY &amp; B</td><td>Prévention des méningites bactériennes</td><td>Adolescents et jeunes adultes</td></tr>
         <tr><td>DTPCa</td><td>Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td>Rappels tout au long de la vie</td></tr>
         <tr><td>Hépatite B</td><td>Prévention de l'hépatite B</td><td>Non immunisés, professionnels de santé</td></tr>
@@ -1034,7 +1033,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       <p>Ce site peut contenir des liens vers des sites tiers (Doctolib, Ameli.fr, etc.). Isabelle Goupil n'est pas responsable du contenu de ces sites externes.</p>
 
       <hr class="legal-sep">
-      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2025</p>
+      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2026</p>
     </div>
   </div>
 </div>
@@ -1077,7 +1076,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       <p>Ce site n'utilise aucun cookie de traçage, de publicité ou d'analyse. La carte Google Maps intégrée peut déposer des cookies tiers lors de son affichage — vous pouvez les bloquer via les paramètres de votre navigateur.</p>
 
       <hr class="legal-sep">
-      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2025</p>
+      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2026</p>
     </div>
   </div>
 </div>
@@ -1097,7 +1096,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
     </div>
     <div class="footer-col">
       <h4>Carte de visite</h4>
-      <a class="cv-dl-btn" href="carte_visite.pdf" target="_blank">📄 Télécharger la carte de visite (PDF)</a>
+      <a class="cv-dl-btn" href="docs/carte_visite.pdf" target="_blank">📄 Télécharger la carte de visite (PDF)</a>
     </div>
   </div>
   <div class="footer-bottom">
