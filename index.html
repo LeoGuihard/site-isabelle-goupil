@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- SEO & Référencement -->
+<meta name="description" content="Isabelle Goupil, Sage-Femme conventionnée à Paris 7e. Suivi gynécologique, grossesse, post-natal, préparation à la naissance, bilans de prévention. 21 rue Chevert, 75007 Paris.">
+<meta name="keywords" content="sage-femme, Paris 7, Paris 7e, gynécologie, grossesse, maternité, post-natal, préparation naissance, contraception, vaccination, bilans de prévention, Chevert">
+<meta name="author" content="Isabelle Goupil">
+<meta name="robots" content="index, follow">
+<meta name="language" content="fr">
+<!-- Open Graph (partage réseaux sociaux) -->
+<meta property="og:title" content="Isabelle Goupil — Sage-Femme Paris 7e">
+<meta property="og:description" content="Sage-Femme conventionnée au 21 rue Chevert, 75007 Paris. Suivi gynécologique, grossesse, préparation à la naissance, bilans de prévention.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="photo_cabinet.jpg">
+<!-- Favicon inline (rose sage-femme) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a2e49'/><text y='44' x='50%' text-anchor='middle' font-size='36' font-family='Georgia,serif' fill='%23e0a0bc'>♀</text></svg>">
+<title>Isabelle Goupil — Sage-Femme Paris 7e</title>
+<style>
+/* =============================================
+   SITE ISABELLE GOUPIL — SAGE-FEMME — v18
+   Dossier : C:\Users\guiha\Documents\Site_mam\site-isabelle-goupil\
+   ============================================= */
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#1e2d3d;--sage:#6b9071;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
+  --text:#2a2624;--muted:#6b6460;--white:#fff;--border:#e2ddd8;
+  --cream:#fdfaf7;--rose:#c0607a;--rose-light:#fde8f0;
+  --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.75;}
+.wrap{max-width:1100px;margin:0 auto;background:var(--cream);box-shadow:0 4px 60px rgba(0,0,0,0.09);}
+
+/* ── HEADER asymétrique ── */
+.hero-header{background:var(--cream);padding:28px 48px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0;}
+.hero-header-inner{display:flex;align-items:baseline;gap:0;border-left:3px solid var(--rose);padding-left:20px;}
+.hero-header-text{display:flex;flex-direction:column;}
+.hero-header h1{font-family:'Playfair Display',Georgia,serif;font-size:2.05em;color:var(--navy);font-weight:500;letter-spacing:0.01em;line-height:1.1;}
+.hero-header .subtitle{font-family:'Inter',sans-serif;font-size:0.72em;color:var(--rose);letter-spacing:0.18em;text-transform:uppercase;margin-top:5px;font-weight:400;}
+
+/* ── STICKY TOP (bandeau RDV — toujours en haut) ── */
+.sticky-top{position:sticky;top:0;z-index:101;box-shadow:0 1px 0 rgba(0,0,0,0.08);}
+/* ── STICKY NAV ── */
+.sticky-nav{position:sticky;top:42px;z-index:100;box-shadow:0 1px 0 rgba(0,0,0,0.06);}
+.top-bar{background:var(--navy);display:flex;justify-content:space-between;align-items:center;padding:9px 48px;gap:16px;}
+.top-bar a.rdv-link{color:rgba(255,255,255,0.6);text-decoration:none;font-family:'Inter',sans-serif;font-size:12.5px;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:400;letter-spacing:.01em;}
+.top-bar a.rdv-link:hover{color:#fff;}
+.rdv-icon{width:13px;height:13px;stroke:rgba(255,255,255,0.55);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.addr-wrap{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.45);font-family:'Inter',sans-serif;font-size:11.5px;white-space:nowrap;}
+.addr-icon{width:11px;height:11px;stroke:rgba(255,255,255,0.35);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.top-search{display:flex;align-items:center;flex:1;max-width:240px;margin:0 auto;}
+.top-search input{width:100%;border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:4px 14px;font-size:12px;font-family:'Inter',sans-serif;outline:none;background:rgba(255,255,255,0.07);color:#fff;transition:border-color .2s,background .2s;}
+.top-search input:focus{border-color:rgba(255,255,255,0.28);background:rgba(255,255,255,0.12);}
+.top-search input::placeholder{color:rgba(255,255,255,0.3);}
+/* Nav bar */
+.nav-bar{background:#fff;display:flex;justify-content:center;border-bottom:1px solid var(--border);}
+.nav-bar button{background:none;border:none;padding:14px 20px;font-size:12px;color:var(--muted);cursor:pointer;letter-spacing:0.05em;font-family:'Inter',sans-serif;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .18s,border-color .18s,background .18s;white-space:nowrap;text-transform:uppercase;}
+.nav-bar button:hover{color:var(--navy);border-bottom-color:var(--rose);background:var(--rose-light);}
+.nav-bar button.active{color:var(--rose);border-bottom-color:var(--rose);}
+.search-results{display:none;background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 14px;margin:0 48px 4px;font-family:'Inter',sans-serif;font-size:13px;position:relative;z-index:10;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.sr-item{padding:7px 0;border-bottom:1px solid var(--border);cursor:pointer;color:var(--navy);font-size:13px;}
+.sr-item:last-child{border-bottom:none;}
+.sr-item:hover{color:var(--rose);}
+
+/* PAGES */
+.page{display:none;padding:48px 56px;min-height:500px;background:var(--cream);}
+.page.active{display:block;}
+.page-title{font-family:'Playfair Display',Georgia,serif;font-size:1.75em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:30px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.section-divider{border:none;border-top:1px solid var(--border);margin:44px 0;}
+.bilan-section-title{font-family:'Inter',sans-serif;font-size:.78em;color:var(--navy);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.bilan-section-title::before{content:'';display:block;width:3px;height:1em;background:var(--rose);border-radius:2px;}
+
+/* ──── PAGE 1 : ACCUEIL ──── */
+.home-hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:34px;align-items:center;margin-bottom:32px;}
+.home-hero-text h2{font-family:'Playfair Display',Georgia,serif;font-size:1.42em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:13px;line-height:1.4;}
+.home-hero-text p{color:var(--muted);font-family:'Inter',sans-serif;font-size:.95em;line-height:1.85;text-align:justify;font-weight:300;}
+.convention-strip{display:inline-flex;align-items:center;gap:7px;background:#f0f6f1;border:1px solid #b8d8ba;border-radius:20px;padding:6px 16px;font-family:'Inter',sans-serif;font-size:12.5px;color:#2a4a30;margin-top:14px;font-weight:500;}
+.convention-strip span{color:var(--sage);}
+.rdv-btn{display:inline-block;background:var(--rose);color:#fff;padding:11px 26px;border-radius:24px;text-decoration:none;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:0.04em;margin-top:15px;font-weight:500;transition:background .2s,transform .15s;}
+.rdv-btn:hover{background:#a04060;transform:translateY(-1px);}
+.home-img{width:100%;height:270px;object-fit:cover;border-radius:4px;}
+.home-services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
+.home-card{border-radius:14px;overflow:hidden;cursor:pointer;transition:box-shadow .25s,transform .2s;}
+.home-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.11);transform:translateY(-3px);}
+.home-card-header{padding:0 20px;text-align:center;transition:background .2s;height:88px;display:flex;flex-direction:column;justify-content:center;}
+.home-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1em;font-weight:500;letter-spacing:0.01em;margin-bottom:5px;}
+.home-card .card-hint{font-family:'Inter',sans-serif;font-size:11px;opacity:0.6;letter-spacing:0.02em;}
+/* Couleurs par carte */
+.home-card.gyneco .home-card-header{background:#f5ece8;border-bottom:2px solid #d9b5a5;}
+.home-card.gyneco h3{color:#6b3020;}
+.home-card.gyneco .card-hint{color:#6b3020;}
+.home-card.gyneco .home-card-body{background:#faf3f0;}
+.home-card.grossesse .home-card-header{background:#fde8f0;border-bottom:2px solid #e0a0bc;}
+.home-card.grossesse h3{color:#8a2040;}
+.home-card.grossesse .card-hint{color:#8a2040;}
+.home-card.grossesse .home-card-body{background:#fdf0f5;}
+.home-card.bilans .home-card-header{background:#e8edf5;border-bottom:2px solid #9aaecc;}
+.home-card.bilans h3{color:#1e3358;}
+.home-card.bilans .card-hint{color:#1e3358;}
+.home-card.bilans .home-card-body{background:#f0f3f9;}
+.home-card.hommes .home-card-header{background:#e8f4ec;border-bottom:2px solid #88bb9a;}
+.home-card.hommes h3{color:#1a4030;}
+.home-card.hommes .card-hint{color:#1a4030;}
+.home-card.hommes .home-card-body{background:#f0f8f3;}
+
+.home-card-body{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;}
+.home-card.open .home-card-body{max-height:300px;padding:14px 18px;}
+.home-card-body p{font-size:0.85em;color:var(--muted);font-family:sans-serif;line-height:1.7;}
+
+/* ──── PAGE 2 : FORMATION ──── */
+.tl-category{
+  margin-bottom:48px;
+  padding:22px 32px 20px;
+  border-radius:10px;
+}
+.tl-category.exp-cat{background:#fdf9f4;border:1px solid #e0cfc0;}
+.tl-category.dip-cat{background:#f4f8fc;border:1px solid #b8cfe0;}
+.tl-category.form-cat{background:#fdf8ee;border:1px solid #e0d0a0;}
+.tl-cat-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+.tl-cat-badge{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;color:#fff;white-space:nowrap;}
+.tl-cat-badge.exp{background:#8b6040;}
+.tl-cat-badge.dip{background:#3a5a82;}
+.tl-cat-badge.form{background:#8b7030;}
+.tl-cat-line{display:none;}
+
+/* Frise horizontale — pas de scroll, répartition égale */
+.tl-horiz{display:flex;align-items:flex-start;position:relative;padding-bottom:0;}
+.tl-horiz::before{content:'';position:absolute;top:7px;left:0;right:0;height:2px;}
+.exp-cat .tl-horiz::before{background:#c4a888;}
+.dip-cat .tl-horiz::before{background:#88a8c4;}
+.form-cat .tl-horiz::before{background:#c4b080;}
+
+/* Nœud */
+.tl-node{display:flex;flex-direction:column;align-items:center;flex:1;min-width:0;position:relative;cursor:pointer;padding:0 8px 8px;}
+.tl-node-dot{width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--sage-mid);transition:transform .2s,background .2s,border-color .2s;margin-bottom:10px;z-index:1;flex-shrink:0;}
+.tl-node:hover .tl-node-dot,.tl-node.open .tl-node-dot{background:var(--accent1);border-color:var(--accent1);transform:scale(1.3);}
+.tl-node-content{text-align:center;padding:0 4px;width:100%;}
+.tl-node-date{font-family:'Inter',sans-serif;font-size:10.5px;color:var(--rose);margin-bottom:3px;font-weight:600;letter-spacing:.03em;}
+.tl-node-title{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--navy);font-weight:500;line-height:1.35;}
+.tl-node:hover .tl-node-title{color:var(--accent1);}
+/* Tooltip inline — s'affiche sous le titre, dans le flux, pas en position absolute */
+/* Tooltip inline, centré sous le point, contenu dans la catégorie */
+.tl-node-tip{
+  display:none;
+  position:relative;
+  margin-top:14px;
+  width:180px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fff;
+  border-radius:8px;
+  padding:9px 14px;
+  font-family:sans-serif;
+  font-size:12.5px;
+  color:var(--muted);
+  box-shadow:0 4px 16px rgba(0,0,0,0.12);
+  line-height:1.6;
+  text-align:center;
+  border:1px solid rgba(0,0,0,0.09);
+  white-space:normal;
+  word-break:break-word;
+  z-index:10;
+}
+/* Petite flèche pointant vers le haut (connexion au point) */
+.tl-node-tip::before{
+  content:'';
+  position:absolute;
+  top:-7px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;height:0;
+  border-left:7px solid transparent;
+  border-right:7px solid transparent;
+  border-bottom:7px solid rgba(0,0,0,0.09);
+}
+.tl-node-tip::after{
+  content:'';
+  position:absolute;
+  top:-6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;height:0;
+  border-left:6px solid transparent;
+  border-right:6px solid transparent;
+  border-bottom:6px solid #fff;
+}
+.tl-node:hover .tl-node-tip,.tl-node.open .tl-node-tip{display:block;}
+
+.ordre-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:9px 18px;font-family:'Inter',sans-serif;font-size:12.5px;color:var(--navy);text-decoration:none;font-weight:500;transition:border-color .18s,color .18s;}
+.ordre-link:hover{border-color:var(--sage);color:var(--sage);}
+.ordre-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
+/* ──── PAGE 3 : CABINET ──── */
+.cabinet-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:22px;margin-bottom:22px;align-items:start;}
+.cab-left{display:flex;flex-direction:column;gap:14px;}
+.info-block{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 22px;box-shadow:0 1px 6px rgba(0,0,0,0.04);}
+.block-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:var(--rose);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.t-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:11px;}
+.t-item:last-child{margin-bottom:0;}
+.t-ico{width:20px;flex-shrink:0;display:flex;padding-top:2px;}
+.t-ico svg{width:15px;height:15px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.t-text strong{color:var(--text);display:block;font-family:sans-serif;font-size:13px;}
+.t-text span{color:var(--muted);font-size:12px;line-height:1.5;font-family:sans-serif;}
+.map-frame{border:1px solid var(--border);border-radius:14px;overflow:hidden;height:100%;min-height:340px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+#mapsIframe{width:100%;height:100%;border:none;min-height:340px;display:block;}
+.photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.photo-item{display:flex;flex-direction:column;gap:5px;}
+.cabinet-photo{width:100%;height:175px;object-fit:cover;border-radius:10px;border:1px solid var(--border);}
+.photo-caption{font-family:sans-serif;font-size:11.5px;color:var(--muted);text-align:center;font-style:italic;}
+
+/* ──── PAGE 4 : GYNECO ──── */
+.gyneco-intro{font-family:'Playfair Display',Georgia,serif;font-size:1.05em;color:var(--muted);font-style:italic;text-align:justify;line-height:1.75;margin-bottom:26px;padding:18px 22px;background:#fff;border-radius:12px;border-left:3px solid var(--rose);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.gyneco-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.gyn-col-title{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:12px;padding:6px 14px;border-radius:20px;color:#fff;display:inline-block;}
+.gyn-col-title.consult{background:#4a8c62;}
+.gyn-col-title.depistage{background:#c8a030;}
+.gyneco-card{border-radius:10px;padding:12px 16px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:8px;line-height:1.5;border:1px solid transparent;font-weight:400;}
+.gyneco-card.c{background:#e8f4ec;border-color:#88bb9a;}
+.gyneco-card.c::before{content:'';width:5px;height:5px;border-radius:50%;background:#4a8c62;flex-shrink:0;}
+.gyneco-card.d{background:#fdf7e8;border-color:#e0c870;}
+.gyneco-card.d::before{content:'';width:5px;height:5px;border-radius:50%;background:#c8a030;flex-shrink:0;}
+.gyneco-links{margin-top:24px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 20px;}
+.gyneco-links h3{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.12em;color:var(--rose);margin-bottom:10px;text-transform:uppercase;font-weight:700;}
+.gyneco-links a{display:block;color:var(--navy);font-family:'Inter',sans-serif;font-size:13px;margin-bottom:6px;text-decoration:none;padding-left:12px;border-left:2px solid var(--rose-light);transition:color .15s,border-color .15s;}
+.gyneco-links a:hover{color:var(--rose);border-left-color:var(--rose);}
+
+/* ──── PAGE 5 : GROSSESSE & POST-NATAL ──── */
+.section-label{display:inline-block;font-family:'Inter',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:16px;color:#fff;}
+.section-label.pre{background:#2c5f8a;}
+.section-label.post{background:#3d7a6e;}
+.grossesse-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;}
+.gc-wrap{position:relative;}
+.gc-face{border:1px solid var(--border);border-radius:14px;padding:16px 18px;cursor:pointer;transition:box-shadow .22s,transform .18s;user-select:none;background:#f9fafb;}
+.gc-face:hover{box-shadow:0 6px 18px rgba(0,0,0,0.09);transform:translateY(-2px);}
+/* 6 couleurs prénatal */
+.gc-face.c1{background:#fde8f0;border-color:#e0a0bc;border-left:4px solid #c0607a;}
+.gc-face.c2{background:#fdf0ea;border-color:#e0b090;border-left:4px solid #c8845a;}
+.gc-face.c3{background:#f5eaf0;border-color:#d090b8;border-left:4px solid #b0608a;}
+.gc-face.c4{background:#eef2f8;border-color:#a0b8d8;border-left:4px solid #4a72a8;}
+.gc-face.c5{background:#e8f0f8;border-color:#90aacc;border-left:4px solid #4272a8;}
+.gc-face.c6{background:#f3eef8;border-color:#c0a8e0;border-left:4px solid #7a5aa0;}
+.gc-face h3{font-family:'Inter',sans-serif;font-size:.78em;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;color:var(--navy);font-weight:600;}
+.gc-face .hint{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);font-style:italic;opacity:.7;}
+.gc-tarif{display:inline-block;font-family:sans-serif;font-size:13px;font-weight:700;color:#8a2040;margin-top:6px;letter-spacing:.01em;}
+.gc-detail{display:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:6px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);line-height:1.75;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.gc-detail.open{display:block;}
+.gc-detail ul{list-style:none;padding:0;}
+.gc-detail ul li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:flex-start;}
+.gc-detail ul li::before{content:'→';color:var(--sage);flex-shrink:0;margin-top:1px;}
+.gc-detail ul li:last-child{border-bottom:none;}
+/* Post-natal steps */
+.pn-steps{display:flex;flex-direction:column;gap:12px;}
+.pn-step{display:flex;gap:16px;align-items:flex-start;border-radius:14px;padding:16px 20px;}
+.pn-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:15px;flex-shrink:0;color:#fff;font-weight:400;font-style:italic;}
+.pn-step.s1{background:#fdf0ea;border-left:4px solid #c8845a;} .pn-step.s1 .pn-num{background:#c8845a;}
+.pn-step.s2{background:#f5eaf0;border-left:4px solid #b0608a;} .pn-step.s2 .pn-num{background:#b0608a;}
+.pn-step.s3{background:#eef2f8;border-left:4px solid #4a72a8;} .pn-step.s3 .pn-num{background:#4a72a8;}
+.pn-step.s4{background:#e8f0f8;border-left:4px solid #4272a8;} .pn-step.s4 .pn-num{background:#4272a8;}
+.pn-step.s5{background:#f3eef8;border-left:4px solid #7a5aa0;} .pn-step.s5 .pn-num{background:#7a5aa0;}
+.pn-step h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin-bottom:3px;font-size:.95em;font-weight:500;}
+.pn-step p{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);text-align:justify;font-weight:300;}
+
+/* ──── PAGE 6 : BILANS & VACCINATIONS ──── */
+.bilans-strips{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;}
+.bilan-strip{display:flex;align-items:stretch;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.bilan-strip-age{background:var(--navy);color:#fff;padding:16px 22px;width:190px;text-align:center;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;white-space:nowrap;}
+.bilan-strip-age strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.35em;font-weight:400;letter-spacing:.02em;}
+.bilan-strip-age span{display:block;font-family:sans-serif;font-size:11px;color:var(--sage-mid);margin-top:3px;letter-spacing:.04em;}
+.bilan-strip-body{flex:1;padding:16px 20px;background:#fff;display:flex;align-items:center;gap:14px;flex-wrap:nowrap;}
+.bilan-strip-desc{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);flex:1;min-width:0;font-weight:300;}
+.bilan-strip-desc strong{color:var(--text);display:block;margin-bottom:3px;}
+.bilan-strip-links{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
+.bilan-strip-links a{display:block;text-align:center;padding:6px 13px;border-radius:3px;font-family:sans-serif;font-size:12px;text-decoration:none;white-space:nowrap;}
+.lgbtiq-badge{display:inline-flex;align-items:center;background:linear-gradient(90deg,#e8a0bf,#a8c4f0,#a0e8d0);color:#1a2e4a;padding:7px 18px;border-radius:24px;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;margin:14px 0 18px;letter-spacing:.02em;}
+.quest-block{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:12px;font-family:'Inter',sans-serif;font-size:13px;}
+.quest-block p{color:var(--muted);margin-bottom:9px;font-style:italic;font-size:12.5px;}
+.quest-block a{display:inline-block;background:var(--accent1);color:#fff;padding:6px 14px;border-radius:3px;font-size:12px;text-decoration:none;margin-right:7px;margin-bottom:4px;}
+.quest-block a.ameli{background:var(--sage);}
+.quest-block a:hover{opacity:.85;}
+.vacc-section{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.vacc-table{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:13px;}
+.vacc-table th{background:var(--navy);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
+.vacc-table td{padding:9px 13px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text);}
+.vacc-table tr:nth-child(even) td{background:#fde8f0;}
+.vacc-table td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+.vacc-note{font-family:sans-serif;font-size:11.5px;color:var(--muted);margin-top:12px;font-style:italic;}
+
+
+/* =============================================
+   RESPONSIVE MOBILE — max 768px
+   ============================================= */
+@media (max-width: 768px) {
+
+  /* ── Header ── */
+  .hero-header{padding:16px 18px 10px;}
+  .hero-header h1{font-size:1.35em;}
+
+  /* ── Bandeau top : empile RDV / recherche / adresse ── */
+  .top-bar{flex-direction:column;align-items:stretch;padding:10px 16px;gap:8px;}
+  .top-bar a.rdv-link{justify-content:center;font-size:13px;}
+  .top-search{max-width:100%;margin:0;}
+  .addr-wrap{justify-content:center;font-size:11px;}
+  .sticky-nav{top:0;}  /* nav colle en haut, top-bar n'est plus sticky sur mobile */
+  .sticky-top{position:relative;}  /* laisse défiler le bandeau RDV sur mobile */
+
+  /* ── Nav : scroll horizontal ── */
+  .nav-bar{justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;}
+  .nav-bar button{padding:11px 14px;font-size:11.5px;flex-shrink:0;}
+
+  /* ── Résultats recherche ── */
+  .search-results{margin:0 10px 3px;}
+
+  /* ── Pages : padding réduit ── */
+  .page{padding:24px 16px;}
+  .page-title{font-size:1.3em;}
+
+  /* ── Accueil : hero en colonne, image cachée ── */
+  .home-hero{grid-template-columns:1fr;gap:16px;}
+  .home-img{display:none;}
+  .home-hero-text h2{font-size:1.15em;}
+
+  /* ── Accueil : cartes en colonne ── */
+  .home-services{grid-template-columns:1fr;}
+
+  /* ── Formation : frise en colonne ── */
+  .tl-category{padding:16px 14px;}
+  .tl-horiz{flex-direction:column;gap:0;}
+  .tl-horiz::before{display:none;}
+  .tl-node{flex-direction:row;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
+  .tl-node:last-child{border-bottom:none;}
+  .tl-node-dot{margin-bottom:0;margin-top:2px;flex-shrink:0;}
+  .tl-node-content{text-align:left;}
+  .tl-node-tip{width:100%;left:0;transform:none;margin-top:8px;}
+
+  /* ── Cabinet : colonne ── */
+  .cabinet-layout{grid-template-columns:1fr;}
+  .map-frame{min-height:220px;}
+  .map-frame iframe{min-height:220px;}
+  .photos-grid{grid-template-columns:1fr 1fr;}
+
+  /* ── Gynéco : colonne ── */
+  .gyneco-cols{grid-template-columns:1fr;}
+
+  /* ── Grossesse : colonne ── */
+  .grossesse-grid{grid-template-columns:1fr;}
+
+  /* ── Bilans strips : empile âge + corps ── */
+  .bilan-strip{flex-direction:column;}
+  .bilan-strip-age{width:100%;padding:12px 16px;flex-direction:row;justify-content:center;gap:10px;white-space:normal;}
+  .bilan-strip-body{flex-wrap:wrap;}
+  .bilan-strip-links{flex-direction:row;flex-wrap:wrap;}
+
+  /* ── Tableau vaccins : police réduite ── */
+  .vacc-table{font-size:11.5px;}
+  .vacc-table th,.vacc-table td{padding:7px 8px;}
+  .vacc-table td:first-child{white-space:normal;}
+  .vacc-section{padding:14px 12px;}
+
+  /* ── Footer : colonne ── */
+  .footer{padding:16px 16px 10px;}
+  .footer-grid{grid-template-columns:1fr;gap:14px;}
+}
+
+/* ── Très petits écrans ── */
+@media (max-width: 400px) {
+  .nav-bar button{padding:10px 10px;font-size:10.5px;}
+  .page{padding:18px 12px;}
+  .photos-grid{grid-template-columns:1fr;}
+}
+
+
+/* ── MODALES LÉGALES ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:200;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:var(--cream);border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 12px 60px rgba(0,0,0,0.22);position:relative;}
+.modal-header{background:var(--navy);color:#fff;padding:18px 26px;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center;}
+.modal-header h2{font-size:1.05em;font-weight:600;font-family:sans-serif;letter-spacing:.04em;}
+.modal-close{background:none;border:none;color:rgba(255,255,255,0.7);font-size:22px;cursor:pointer;line-height:1;padding:0 4px;}
+.modal-close:hover{color:#fff;}
+.modal-body{padding:28px 32px;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--text);line-height:1.85;font-weight:300;}
+.modal-body h3{font-family:'Inter',sans-serif;color:var(--navy);font-size:.88em;font-weight:700;margin:22px 0 6px;letter-spacing:.06em;text-transform:uppercase;}
+.modal-body h3:first-child{margin-top:0;}
+.modal-body p{color:var(--muted);margin-bottom:10px;}
+.modal-body a{color:#c0607a;text-decoration:none;}
+.modal-body a:hover{text-decoration:underline;}
+.modal-body .legal-sep{border:none;border-top:1px solid var(--border);margin:18px 0;}
+@media(max-width:768px){.modal-body{padding:18px 16px;}.modal-header{padding:14px 16px;}}
+/* ── RESPONSIVE MOBILE ── */
+@media(max-width:700px){
+  .wrap{box-shadow:none;}
+  .hero-header{padding:20px 20px 16px;}
+  .hero-header-inner{padding-left:14px;}
+  .hero-header h1{font-size:1.5em;}
+  .hero-header .subtitle{font-size:0.68em;letter-spacing:0.13em;}
+  .nav-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;justify-content:flex-start;padding:0 8px;}
+  .nav-bar button{padding:12px 13px;font-size:11px;}
+  .page{padding:24px 18px 40px;}
+  .home-grid{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr;}
+  .footer{padding:24px 20px 14px;}
+  .footer-grid{grid-template-columns:1fr;}
+  .sticky-nav{top:0;}
+}
+
+
+/* Surlignage recherche */
+mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding:0 1px;
+  animation:hl-fade 4s forwards;}
+@keyframes hl-fade{0%,70%{background:#fff176;}100%{background:transparent;}}
+/* FOOTER */
+.footer{background:#1a2330;color:rgba(255,255,255,0.62);padding:28px 56px 16px;font-family:'Inter',sans-serif;font-size:12px;}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.footer-col h4{color:rgba(255,255,255,0.35);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
+.footer-col p,.footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:4px;line-height:1.7;font-size:12.5px;font-weight:300;}
+.footer-col a:hover{color:#fff;}
+.cv-dl-btn{display:inline-block;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.8);padding:5px 12px;border-radius:3px;font-size:11px;text-decoration:none;margin-top:3px;}
+.footer-bottom{text-align:center;}
+.footer-links a{color:rgba(255,255,255,0.3);text-decoration:none;margin:0 10px;font-size:11px;letter-spacing:.02em;}
+.footer-links a:hover{color:#fff;}
+
+.pn-zone{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--rose);font-weight:500;letter-spacing:0.04em;margin-bottom:4px;margin-top:2px;}
+/* ── BANDEAU COOKIES ── */
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);color:rgba(255,255,255,0.82);font-family:sans-serif;font-size:12.5px;padding:13px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;box-shadow:0 -3px 16px rgba(0,0,0,0.22);transition:transform .3s ease;}
+.cookie-banner.hidden{transform:translateY(110%);}
+.cookie-banner p{margin:0;line-height:1.6;}
+.cookie-banner p a{color:var(--sage-mid);text-decoration:underline;cursor:pointer;}
+
+/* ── CITATION ACCUEIL ── */
+.accueil-citation{
+  margin:36px 0 28px;
+  padding:24px 32px 24px 28px;
+  background:var(--rose-light);
+  border-left:3px solid var(--rose);
+  border-radius:0 8px 8px 0;
+  position:relative;
+}
+.accueil-citation::before{
+  content:'\201C';
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:4em;
+  color:var(--rose);
+  opacity:0.3;
+  position:absolute;
+  top:-8px;left:10px;
+  line-height:1;
+}
+.accueil-citation p{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.08em;
+  font-style:italic;
+  color:var(--navy);
+  line-height:1.7;
+  margin:0 0 10px 28px;
+}
+.accueil-citation cite{
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-size:0.78em;
+  color:var(--rose);
+  font-style:normal;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-left:28px;
+}
+
+.cookie-btns{display:flex;gap:10px;flex-shrink:0;}
+.cookie-btn{background:#c0607a;color:#fff;border:none;border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:sans-serif;cursor:pointer;white-space:nowrap;}
+.cookie-btn:hover{background:#a04060;}
+.cookie-btn-refuse{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:sans-serif;cursor:pointer;white-space:nowrap;}
+.cookie-btn-refuse:hover{color:#fff;border-color:rgba(255,255,255,0.6);}
+.cookie-btn:hover{background:#a04060;}
+
+/* ── MAP PLACEHOLDER ── */
+#mapContainer{position:relative;width:100%;height:100%;}
+.map-placeholder{display:flex;align-items:center;justify-content:center;background:var(--cream);border:1px dashed var(--border);border-radius:8px;min-height:280px;padding:24px;}
+.map-ph-inner{text-align:center;max-width:320px;}
+.map-ph-inner p{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5;}
+.map-ph-btn{background:var(--rose);color:#fff;border:none;padding:9px 18px;border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer;letter-spacing:0.04em;transition:opacity .18s;}
+.map-ph-btn:hover{opacity:.85;}
+.map-ph-link{display:inline-block;padding:9px 18px;border:1px solid var(--muted);border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);text-decoration:none;transition:color .18s,border-color .18s;}
+.map-ph-link:hover{color:var(--navy);border-color:var(--navy);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- STICKY TOP : bandeau RDV (collé au sommet en permanence) -->
+<div class="sticky-top">
+  <div class="top-bar">
+    <a class="rdv-link" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">
+      <svg class="rdv-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Prendre RDV en ligne — Doctolib
+    </a>
+    <div class="top-search">
+      <input type="text" id="search-input" placeholder="Rechercher sur le site…" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')doSearch(this.value)">
+    </div>
+    <div class="addr-wrap">
+      <svg class="addr-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      21 rue Chevert, 75007 Paris
+    </div>
+  </div>
+  <div class="search-results" id="search-results"></div>
+</div>
+
+<!-- HEADER : Isabelle Goupil (disparaît au scroll) -->
+<div class="hero-header">
+  <div class="hero-header-inner">
+    <div class="hero-header-text">
+      <h1>Isabelle Goupil</h1>
+      <div class="subtitle">Sage-Femme &nbsp;·&nbsp; Conventionnée</div>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY NAV : barre de navigation (collée après le bandeau RDV) -->
+<div class="sticky-nav">
+  <nav class="nav-bar">
+    <button class="active" onclick="showPage('accueil',this)">Accueil</button>
+    <button onclick="showPage('formation',this)">Formation</button>
+    <button onclick="showPage('cabinet',this)">Le cabinet</button>
+    <button onclick="showPage('gyneco',this)">Suivi gynécologique</button>
+    <button onclick="showPage('grossesse',this)">Grossesse &amp; Post-natal</button>
+    <button onclick="showPage('bilans',this)">Bilans de prévention &amp; Vaccins</button>
+  </nav>
+</div>
+
+<!-- ===== PAGE 1 : ACCUEIL ===== -->
+<div class="page active" id="page-accueil">
+  <div class="home-hero">
+    <div class="home-hero-text">
+      <h2>Consultation de contraception &amp; suivi gynécologique</h2>
+      <p>Isabelle Goupil, sage-femme conventionnée à Paris 7<sup>e</sup>, vous accompagne tout au long de votre vie gynécologique — de la première consultation à la ménopause, en passant par la grossesse et le post-natal.</p>
+      <div class="convention-strip"><span>✓</span> Conventionnée &nbsp;·&nbsp; Carte Vitale acceptée</div><br>
+      <a class="rdv-btn" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">Prendre rendez-vous sur Doctolib</a>
+    </div>
+    <!-- Remplacez Image_page_accueil.png par le nom exact de votre fichier -->
+    <img class="home-img" src="Image_page_accueil.png" alt="Consultation sage-femme" onerror="this.style.background='#e8f0e9';this.style.minHeight='270px';">
+  </div>
+  <div class="home-services">
+    <div class="home-card gyneco" onclick="this.classList.toggle('open')">
+      <div class="home-card-header">
+        <h3>Suivi gynécologique</h3>
+        <div class="card-hint">↓ Cliquer pour les détails</div>
+      </div>
+      <div class="home-card-body"><p>Contraception, dépistages, infections, IST, ménopause</p></div>
+    </div>
+    <div class="home-card grossesse" onclick="this.classList.toggle('open')">
+      <div class="home-card-header">
+        <h3>Suivi de grossesse</h3>
+        <div class="card-hint">↓ Cliquer pour les détails</div>
+      </div>
+      <div class="home-card-body">
+        <p><strong>Prénatal :</strong> Bilan préconceptionnel, suivi mensuel, entretien prénatal, préparation à la naissance, monitoring.<br><br>
+        <strong>Post-natal :</strong> Visite à domicile, soutien à l'allaitement, consultation &amp; entretien post-natals, rééducation périnéale.</p>
+      </div>
+    </div>
+    <div class="home-card bilans" onclick="this.classList.toggle('open')">
+      <div class="home-card-header">
+        <h3>Bilans de prévention &amp; Vaccins</h3>
+        <div class="card-hint">↓ Cliquer pour les détails</div>
+      </div>
+      <div class="home-card-body"><p>Bilan de santé global pour les 18-25 ans et les 45-50 ans.<br>Prescription et injection des vaccins à tout âge.</p></div>
+    </div>
+    <div class="home-card hommes" onclick="this.classList.toggle('open')">
+      <div class="home-card-header">
+        <h3>Pour les hommes</h3>
+        <div class="card-hint">↓ Cliquer pour les détails</div>
+      </div>
+      <div class="home-card-body"><p>Information et prescription vaccins, dépistage des IST, accompagnement dans les différents rendez-vous autour d'une grossesse.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 2 : FORMATION ===== -->
+<div class="page" id="page-formation">
+  <h2 class="page-title">Formation &amp; parcours</h2>
+  <p style="font-family:sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:28px;">Cliquez sur les points pour afficher les détails.</p>
+
+  <!-- FRISE 1 : Expériences -->
+  <div class="tl-category exp-cat">
+    <div class="tl-cat-header">
+      <span class="tl-cat-badge exp">Expériences professionnelles</span>
+      <div class="tl-cat-line"></div>
+    </div>
+    <div class="tl-horiz">
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">1993 – 2003</div>
+          <div class="tl-node-title">Maternité N.-D. de Bon Secours — Paris 14e</div>
+          <div class="tl-node-tip">Praticienne hospitalière sage-femme : salle de naissance, suites de couches, grossesses pathologiques.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2003 – 2013</div>
+          <div class="tl-node-title">Maternité Port Royal — Paris 14e</div>
+          <div class="tl-node-tip">Praticienne hospitalière sage-femme : salle de naissance, explorations fonctionnelles, prise en charge des patientes séropositives.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">depuis 2013</div>
+          <div class="tl-node-title">Cabinet libéral — Paris 7e</div>
+          <div class="tl-node-tip">Sage-femme libérale : contraception, suivi gynécologique, grossesse, préparation à la naissance, post-natal, rééducation périnéale.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRISE 2 : Diplômes -->
+  <div class="tl-category dip-cat">
+    <div class="tl-cat-header">
+      <span class="tl-cat-badge dip">Diplômes</span>
+      <div class="tl-cat-line"></div>
+    </div>
+    <div class="tl-horiz">
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">1993</div>
+          <div class="tl-node-title">Diplôme d'État de Sage-Femme</div>
+          <div class="tl-node-tip">École de Sages-Femmes — CHU de Caen.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">1994</div>
+          <div class="tl-node-title">DU Échographie obstétricale</div>
+          <div class="tl-node-tip">Maternité Port Royal.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2013</div>
+          <div class="tl-node-title">DU Gynécologie préventive et contraceptive</div>
+          <div class="tl-node-tip">UFR Sciences de la Santé Paris Île-de-France Ouest — Université de Versailles.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRISE 3 : Formations continues -->
+  <div class="tl-category form-cat">
+    <div class="tl-cat-header">
+      <span class="tl-cat-badge form">Formations continues</span>
+      <div class="tl-cat-line"></div>
+    </div>
+    <div class="tl-horiz">
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2013</div>
+          <div class="tl-node-title">Rééducation périnéale</div>
+          <div class="tl-node-tip">ADCO Paris.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2014</div>
+          <div class="tl-node-title">Allaitement maternel</div>
+          <div class="tl-node-tip">« Co-naître ».</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2015</div>
+          <div class="tl-node-title">Yoga</div>
+          <div class="tl-node-tip">B. de Gasquet.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2019</div>
+          <div class="tl-node-title">Hypnose</div>
+          <div class="tl-node-tip">Médic Formation.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2021</div>
+          <div class="tl-node-title">Dépression postnatale</div>
+          <div class="tl-node-tip">Médic Formation.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2021</div>
+          <div class="tl-node-title">Rééducation périnéale</div>
+          <div class="tl-node-tip">Médic Formation.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2024</div>
+          <div class="tl-node-title">Douleurs pelvi-périnéales</div>
+          <div class="tl-node-tip">Health Events.</div>
+        </div>
+      </div>
+      <div class="tl-node" onclick="toggleNode(this)">
+        <div class="tl-node-dot"></div>
+        <div class="tl-node-content">
+          <div class="tl-node-date">2025</div>
+          <div class="tl-node-title">Douleurs vulvaires</div>
+          <div class="tl-node-tip">Mana Santé.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="ordre-link" href="https://www.ordre-sages-femmes.fr" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Ordre National des Sages-Femmes
+  </a>
+</div>
+
+<!-- ===== PAGE 3 : CABINET ===== -->
+<div class="page" id="page-cabinet">
+  <h2 class="page-title">Le cabinet</h2>
+  <div class="cabinet-layout">
+    <div class="cab-left">
+      <div class="info-block">
+        <div class="block-label">Adresse</div>
+        <p style="font-family:sans-serif;font-size:14px;line-height:1.9;color:var(--text);">21 rue Chevert<br>75007 Paris</p>
+      </div>
+      <div class="info-block">
+        <div class="block-label">Comment venir ?</div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" stroke="#2962a3"><circle cx="12" cy="12" r="9"/><path d="M7 16V8l5 5 5-5v8" stroke-width="2"/></svg></div>
+          <div class="t-text"><strong>Métro</strong><span><b>Tour-Maubourg</b> · <b>Invalides</b> (L8, L13) · <b>École Militaire</b> (L8)</span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" stroke="#e85d2a"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M2 11h20M6 19v2M18 19v2"/><circle cx="6.5" cy="16.5" r="1.1"/><circle cx="17.5" cy="16.5" r="1.1"/></svg></div>
+          <div class="t-text"><strong>Bus</strong><span>Lignes <b>28, 49, 69, 82, 87</b></span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" stroke="#b5459b"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M2 10h20M8 21l-2-4h12l-2 4"/><circle cx="8" cy="14.5" r="1.1"/><circle cx="16" cy="14.5" r="1.1"/></svg></div>
+          <div class="t-text"><strong>RER C</strong><span><b>Invalides</b></span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" stroke="#4a7c4e"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 17V7h5a3 3 0 0 1 0 6H9"/></svg></div>
+          <div class="t-text"><strong>Parking</strong><span>Places souvent disponibles autour du cabinet</span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" stroke="#e8902a"><circle cx="5.5" cy="17.5" r="3"/><circle cx="18.5" cy="17.5" r="3"/><path d="M15 6a1 1 0 0 0 0-2H9l-1.5 9h10L15 7"/><path d="M5.5 17.5L9 8"/></svg></div>
+          <div class="t-text"><strong>Vélib'</strong><span>Station <b>Chevert - Grenelle</b> à 100m</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="map-frame">
+      <div id="mapContainer">
+        <div id="mapPlaceholder" class="map-placeholder">
+          <div class="map-ph-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted);margin-bottom:12px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>La carte est désactivée car vous n'avez pas accepté les cookies.</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px;">
+              <button class="map-ph-btn" onclick="acceptCookiesAndLoadMap()">Accepter et afficher la carte</button>
+              <a href="https://maps.google.com/?q=21+Rue+Chevert+75007+Paris" target="_blank" rel="noopener" class="map-ph-link">Voir sur Google Maps ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 style="font-family:sans-serif;font-size:10.5px;color:#555;letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700;">Photos du cabinet</h3>
+  <div class="photos-grid">
+    <!-- Placez vos photos dans le même dossier que ce fichier HTML -->
+    <div class="photo-item">
+      <img class="cabinet-photo" src="photo_cabinet_entree.jpeg" alt="Entrée" onerror="this.style.background='#e8f0e9';">
+      <span class="photo-caption">Entrée</span>
+    </div>
+    <div class="photo-item">
+      <img class="cabinet-photo" src="photo_cabinet_bureau.jpeg" alt="Mon bureau" onerror="this.style.background='#e8f0e9';">
+      <span class="photo-caption">Mon bureau</span>
+    </div>
+    <div class="photo-item">
+      <img class="cabinet-photo" src="photo_cabinet_bureau2.jpeg" alt="Bureau voisin" onerror="this.style.background='#e8f0e9';">
+      <span class="photo-caption">Bureau voisin</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 4 : SUIVI GYNÉCOLOGIQUE ===== -->
+<div class="page" id="page-gyneco">
+  <h2 class="page-title">Le suivi gynécologique à tout âge</h2>
+  <div class="gyneco-intro">En tant que sage-femme, je suis habilitée à assurer le suivi gynécologique de prévention des femmes en bonne santé, à prescrire et poser des dispositifs contraceptifs, et à réaliser les dépistages recommandés à tous les âges de la vie.</div>
+  <div class="gyneco-cols">
+    <div>
+      <div class="gyn-col-title consult">Consultations</div>
+      <div class="gyneco-card c">Première consultation gynécologique</div>
+      <div class="gyneco-card c">La contraception et le suivi</div>
+      <div class="gyneco-card c">Prescription, pose et retrait DIU &amp; implant contraceptif</div>
+      <div class="gyneco-card c">Les douleurs pelviennes et périnéales</div>
+      <div class="gyneco-card c">La pré-ménopause</div>
+      <div class="gyneco-card c">Accompagnement de la ménopause (méthodes naturelles)</div>
+    </div>
+    <div>
+      <div class="gyn-col-title depistage">Dépistages</div>
+      <div class="gyneco-card d">Le dépistage cancer du sein</div>
+      <div class="gyneco-card d">Le dépistage du cancer du col de l'utérus selon l'âge (FCV / HPV)</div>
+      <div class="gyneco-card d">Le dépistage et traitement des infections locales (mycose, candidose, infection urinaire)</div>
+      <div class="gyneco-card d">Le dépistage et traitement des IST (partenaire également)</div>
+    </div>
+  </div>
+  <div class="gyneco-links" style="margin-top:32px;">
+    <h3>Liens utiles</h3>
+    <a href="https://www.onsexprime.fr" target="_blank">onsexprime.fr — Contraception &amp; sexualité</a>
+    <a href="https://www.ameli.fr" target="_blank">ameli.fr — Assurance maladie</a>
+    <a href="https://www.sparadrap.org/boutique/produit/guide-la-premiere-consultation-gynecologique" target="_blank">Guide de la 1ère consultation gynécologique →</a>
+  </div>
+</div>
+
+<!-- ===== PAGE 5 : GROSSESSE & POST-NATAL ===== -->
+<div class="page" id="page-grossesse">
+  <h2 class="page-title">Grossesse &amp; Post-natal</h2>
+
+  <!-- PRÉNATAL -->
+  <div class="section-label pre">Prénatal</div>
+  <p style="font-family:sans-serif;font-size:12.5px;color:var(--muted);margin-bottom:14px;font-style:italic;">Cliquez sur chaque carte pour afficher le détail.</p>
+  <div class="grossesse-grid">
+    <div class="gc-wrap">
+      <div class="gc-face c1" onclick="toggleCard(this)">
+        <h3>Bilan préconceptionnel</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">50 €</div>
+      </div>
+      <div class="gc-detail">Consultation pour préparer la grossesse dans les meilleures conditions.</div>
+    </div>
+    <div class="gc-wrap">
+      <div class="gc-face c5" onclick="toggleCard(this)">
+        <h3>Consultations mensuelles</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">50 €</div>
+      </div>
+      <div class="gc-detail">Suivi mensuel jusqu'au retour vers la maternité choisie.</div>
+    </div>
+    <div class="gc-wrap">
+      <div class="gc-face c5" onclick="toggleCard(this)">
+        <h3>Entretien prénatal</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">75 €</div>
+      </div>
+      <div class="gc-detail">Le conjoint est toujours le bienvenu pour cet entretien d'accompagnement personnalisé.</div>
+    </div>
+    <div class="gc-wrap">
+      <div class="gc-face c1" onclick="toggleCard(this)">
+        <h3>Monitoring de surveillance</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">80 €</div>
+      </div>
+      <div class="gc-detail">Réalisé uniquement au cabinet pour assurer un suivi de proximité.</div>
+    </div>
+    <div class="gc-wrap">
+      <div class="gc-face c1" onclick="toggleCard(this)">
+        <h3>Séances individuelles</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">88,40 €</div>
+      </div>
+      <div class="gc-detail">
+        <strong style="color:var(--navy);display:block;margin-bottom:8px;">À la carte</strong>
+        <p style="margin-bottom:10px;font-style:italic;color:var(--muted);">Le conjoint est le bienvenu également.</p>
+        <ul>
+          <li>Séance 1 : Prémices du travail, quand partir à la maternité, gestion des contractions</li>
+          <li>Séance 2 : Déroulement du travail — voie basse ou césarienne, respiration</li>
+          <li>Séance 3 : Le périnée avant, pendant et après l'accouchement, exercices de poussée</li>
+          <li>Séance 4 : Suites de couches, prendre soin de soi, RDV à prévoir</li>
+          <li>Séance 5 : Mise en place de l'allaitement</li>
+          <li>Séance 6 : Préparer l'arrivée du bébé — rythme, couchage, pleurs, premier mois</li>
+          <li>Séance 7 (avec conjoint) : Gérer le travail ensemble, respiration, postures, ballon</li>
+          <li>EPI-NO : Préparer le périnée avec la sonde</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gc-wrap">
+      <div class="gc-face c5" onclick="toggleCard(this)">
+        <h3>Séances collectives</h3>
+        <div class="hint">↓ cliquer pour le détail</div>
+        <div class="gc-tarif">37,12 €</div>
+      </div>
+      <div class="gc-detail">
+        <strong style="color:var(--navy);display:block;margin-bottom:6px;">Maternité Sainte Félicité — 7 rue Casablanca, 75015 Paris</strong>
+        <p style="margin-bottom:10px;font-style:italic;color:var(--muted);">Même programme que pour les séances individuelles.</p>
+        Séances collectives pour partager l'expérience et créer du lien avec d'autres futurs parents.
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- POST-NATAL -->
+  <div class="section-label post">Post-natal</div>
+  <div class="pn-steps" style="margin-top:12px;">
+    <div class="pn-step s1">
+      <div class="pn-num">1</div>
+      <div><h3>Visite à domicile</h3><p class="pn-zone">7e, 15e et arrondissements limitrophes</p><p>Une visite à domicile la 2e semaine après la naissance, pour les patientes suivies.</p></div>
+    </div>
+    <div class="pn-step s2">
+      <div class="pn-num">2</div>
+      <div><h3>Consultations maman / bébé / allaitement</h3><p>Durant le premier mois, des consultations au cabinet — soutien à l'allaitement inclus.</p></div>
+    </div>
+    <div class="pn-step s3">
+      <div class="pn-num">3</div>
+      <div><h3>Entretien post-natal</h3><p>Un temps d'échange dédié pour faire le point sur votre vécu de l'accouchement et vos besoins actuels.</p></div>
+    </div>
+    <div class="pn-step s4">
+      <div class="pn-num">4</div>
+      <div><h3>Bilan de rééducation post-natal</h3><p>Évaluation et prise en charge de la rééducation périnéale et abdominale après l'accouchement.</p></div>
+    </div>
+    <div class="pn-step s5">
+      <div class="pn-num">5</div>
+      <div><h3>Consultation post-natale gynécologique</h3><p>Consultation de suivi gynécologique pour le retour à la contraception et un bilan de santé global.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PAGE 6 : BILANS & VACCINATIONS ===== -->
+<div class="page" id="page-bilans">
+  <h2 class="page-title">Bilans de prévention &amp; Vaccinations</h2>
+  <div class="lgbtiq-badge">LGBTQIA+ friendly</div>
+
+  <!-- Bilans -->
+  <div class="bilan-section-title">Bilans de prévention</div>
+  <p style="font-family:sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:18px;">Je pratique exclusivement les bilans correspondant aux tranches d'âge <strong>18–25 ans</strong> et <strong>45–50 ans</strong>.</p>
+  <div class="bilans-strips">
+    <div class="bilan-strip">
+      <div class="bilan-strip-age">
+        <strong>18 — 25 ans</strong>
+        <span>Prévention jeune</span>
+      </div>
+      <div class="bilan-strip-body">
+        <div class="bilan-strip-desc">
+          <strong>Bilan de santé global</strong>
+          Première consultation et prévention — auto-questionnaire à apporter le jour du RDV.
+        </div>
+        <div class="bilan-strip-links">
+          <a href="MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
+        </div>
+      </div>
+    </div>
+    <div class="bilan-strip">
+      <div class="bilan-strip-age">
+        <strong>45 — 50 ans</strong>
+        <span>Dépistages &amp; prévention</span>
+      </div>
+      <div class="bilan-strip-body">
+        <div class="bilan-strip-desc">
+          <strong>Bilan de santé global</strong>
+          Bilan de prévention et dépistages adaptés — auto-questionnaire à apporter le jour du RDV.
+        </div>
+        <div class="bilan-strip-links">
+          <a href="MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Vaccinations -->
+  <div class="bilan-section-title">Vaccinations</div>
+  <div class="vacc-section">
+    <p style="font-family:sans-serif;font-size:13px;color:var(--muted);margin-bottom:16px;text-align:justify;">Je peux prescrire et administrer les vaccins recommandés dans le cadre du suivi gynécologique et des bilans de prévention.</p>
+    <table class="vacc-table">
+      <thead>
+        <tr><th>Vaccin</th><th>Indication principale</th><th>Population concernée</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>HPV</td><td>Prévention des cancers du col de l'utérus et autres cancers HPV-induits</td><td>11–19 ans (rattrapage jusqu'à 26 ans)</td></tr>
+        <tr><td>Méningocoques ACWY &amp; B</td><td>Prévention des méningites bactériennes</td><td>Adolescents et jeunes adultes</td></tr>
+        <tr><td>DTPCa</td><td>Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td>Rappels tout au long de la vie</td></tr>
+        <tr><td>Hépatite B</td><td>Prévention de l'hépatite B</td><td>Non immunisés, professionnels de santé</td></tr>
+        <tr><td>Grippe</td><td>Prévention de la grippe saisonnière</td><td>Annuel, personnes à risque et grossesse</td></tr>
+        <tr><td>Rophylac</td><td>Prévention de l'allo-immunisation rhésus</td><td>Femmes enceintes de groupe Rhésus négatif</td></tr>
+        <tr><td>COVID-19</td><td>Prévention des formes graves</td><td>Selon recommandations en vigueur</td></tr>
+      </tbody>
+    </table>
+    <p class="vacc-note">Les recommandations vaccinales évoluent. Consultez <a href="https://www.ameli.fr" target="_blank" style="color:var(--accent1)">ameli.fr</a> ou le calendrier vaccinal officiel pour les dernières mises à jour.</p>
+  </div>
+</div>
+
+
+<!-- MODALE : MENTIONS LÉGALES -->
+<div class="modal-overlay" id="modal-mentions">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Mentions légales</h2>
+      <button class="modal-close" onclick="closeModal('modal-mentions')">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Responsable de la publication</h3>
+      <p><strong>Isabelle Goupil</strong>, Sage-Femme diplômée d'État<br>
+      Exercice libéral — 21 rue Chevert, 75007 Paris<br>
+      Tél. : 06 99 35 68 75<br>
+      Email : <a href="mailto:isabelle.goupil@gmail.com">isabelle.goupil@gmail.com</a></p>
+
+      <h3>Inscription ordinale</h3>
+      <p>Inscrite à l'Ordre National des Sages-Femmes — section département de Paris.</p>
+
+      <h3>Conception et développement</h3>
+      <p><strong>Léo Guihard</strong><br>
+      Email : <a href="mailto:guihardleo@gmail.com">guihardleo@gmail.com</a></p>
+
+      <h3>Hébergement du site</h3>
+      <p><em>À compléter après mise en ligne (nom de l'hébergeur, adresse, site web).</em></p>
+
+      <h3>Propriété intellectuelle</h3>
+      <p>L'ensemble des contenus présents sur ce site (textes, structure, visuels) est la propriété exclusive d'Isabelle Goupil, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+
+      <h3>Responsabilité</h3>
+      <p>Les informations publiées sur ce site ont un caractère purement informatif et ne se substituent en aucun cas à une consultation médicale ou paramédicale. Isabelle Goupil ne saurait être tenue responsable de l'interprétation des informations contenues sur ce site.</p>
+
+      <h3>Liens externes</h3>
+      <p>Ce site peut contenir des liens vers des sites tiers (Doctolib, Ameli.fr, etc.). Isabelle Goupil n'est pas responsable du contenu de ces sites externes.</p>
+
+      <hr class="legal-sep">
+      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2025</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODALE : POLITIQUE DE CONFIDENTIALITÉ -->
+<div class="modal-overlay" id="modal-confidentialite">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>Politique de confidentialité</h2>
+      <button class="modal-close" onclick="closeModal('modal-confidentialite')">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Responsable du traitement</h3>
+      <p><strong>Isabelle Goupil</strong>, Sage-Femme libérale<br>
+      21 rue Chevert, 75007 Paris<br>
+      Email : <a href="mailto:isabelle.goupil@gmail.com">isabelle.goupil@gmail.com</a></p>
+
+      <h3>Données collectées</h3>
+      <p>Ce site vitrine ne collecte aucune donnée personnelle de façon automatique. Aucun formulaire de contact ni outil d'analyse n'est utilisé.<br><br><strong>Google Maps</strong> : la page « Le cabinet » intègre une carte Google Maps, chargée uniquement après votre consentement explicite. En cas d'acceptation, Google peut déposer des cookies de fonctionnement sur votre appareil, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--rose);">politique de confidentialité de Google</a>. Vous pouvez refuser ce chargement via la bannière de consentement — un lien externe vers Google Maps vous est alors proposé en remplacement.</p>
+      <p>Les prises de rendez-vous sont réalisées via la plateforme <strong>Doctolib</strong>, soumise à sa propre politique de confidentialité, consultable sur <a href="https://www.doctolib.fr/terms/privacy" target="_blank">doctolib.fr</a>.</p>
+
+      <h3>Données de santé</h3>
+      <p>Dans le cadre des consultations, des données de santé à caractère personnel sont collectées et traitées par Isabelle Goupil en tant que professionnelle de santé, dans le strict respect du <strong>secret médical</strong> et du <strong>RGPD (Règlement Général sur la Protection des Données)</strong>.</p>
+      <p>Ces données sont conservées dans un logiciel métier sécurisé et hébergé par un <strong>Hébergeur de Données de Santé (HDS) agréé</strong>, conformément à l'article L.1111-8 du Code de la santé publique.</p>
+
+      <h3>Durée de conservation</h3>
+      <p>Les données médicales sont conservées pendant <strong>20 ans</strong> à compter de la dernière consultation, conformément à la réglementation en vigueur.</p>
+
+      <h3>Vos droits</h3>
+      <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
+      <p>→ Droit d'accès à vos données<br>
+      → Droit de rectification<br>
+      → Droit à l'effacement (dans les limites légales applicables aux données de santé)<br>
+      → Droit à la limitation du traitement<br>
+      → Droit à la portabilité</p>
+      <p>Pour exercer ces droits, contactez : <a href="mailto:isabelle.goupil@gmail.com">isabelle.goupil@gmail.com</a></p>
+      <p>En cas de réclamation, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank">cnil.fr</a></p>
+
+      <h3>Cookies</h3>
+      <p>Ce site n'utilise aucun cookie de traçage, de publicité ou d'analyse. La carte Google Maps intégrée peut déposer des cookies tiers lors de son affichage — vous pouvez les bloquer via les paramètres de votre navigateur.</p>
+
+      <hr class="legal-sep">
+      <p style="font-size:12px;color:#999;">Dernière mise à jour : septembre 2025</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Isabelle Goupil</h4>
+      <p>21 rue Chevert — 75007 Paris</p>
+      <a href="tel:+33699356875">06 99 35 68 75</a>
+      <p>isabelle.goupil@gmail.com</p>
+    </div>
+    <div class="footer-col">
+      <h4>Rendez-vous</h4>
+      <a href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">Prendre RDV sur Doctolib</a>
+    </div>
+    <div class="footer-col">
+      <h4>Carte de visite</h4>
+      <a class="cv-dl-btn" href="carte_visite.pdf" target="_blank">📄 Télécharger la carte de visite (PDF)</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-links">
+      <a href="#" onclick="openModal('modal-mentions');return false;">Mentions légales</a>
+      <a href="#" onclick="openModal('modal-confidentialite');return false;">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+
+</div><!-- fin .wrap -->
+
+<script>
+/* =============================================
+   NAVIGATION
+   ============================================= */
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-bar button').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* =============================================
+   FRISE FORMATION — clic sur le point ou le texte
+   ============================================= */
+function toggleNode(node) {
+  const isOpen = node.classList.contains('open');
+  // Fermer tous les autres dans la même frise
+  const horiz = node.closest('.tl-horiz');
+  horiz.querySelectorAll('.tl-node.open').forEach(n => n.classList.remove('open'));
+  if (!isOpen) node.classList.add('open');
+}
+
+/* =============================================
+   CARTES GROSSESSE
+   ============================================= */
+function toggleCard(face) {
+  const detail = face.parentElement.querySelector('.gc-detail');
+  const open = detail.classList.contains('open');
+  document.querySelectorAll('.gc-detail.open').forEach(d => d.classList.remove('open'));
+  if (!open) detail.classList.add('open');
+}
+
+/* =============================================
+   RECHERCHE — scan du texte réel de chaque page
+   ============================================= */
+const PAGES = ['accueil','formation','cabinet','gyneco','grossesse','bilans'];
+const PAGE_LABELS = {
+  accueil:   'Accueil',
+  formation: 'Formation & parcours',
+  cabinet:   'Le cabinet',
+  gyneco:    'Suivi gynécologique',
+  grossesse: 'Grossesse & Post-natal',
+  bilans:    'Bilans de prévention & Vaccins',
+};
+
+function normalize(s) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+/* Extrait les mots du texte d'une page (sans le HTML) */
+function pageWords(id) {
+  const el = document.getElementById('page-' + id);
+  if (!el) return [];
+  return normalize(el.innerText).match(/\w+/g) || [];
+}
+
+/* Construit l'index une seule fois après chargement */
+let SEARCH_INDEX = null;
+function buildIndex() {
+  if (SEARCH_INDEX) return;
+  SEARCH_INDEX = PAGES.map(id => ({
+    id,
+    label: PAGE_LABELS[id],
+    words: new Set(pageWords(id)),
+  }));
+}
+
+function doSearch(val) {
+  buildIndex();
+  const q = normalize(val.trim());
+  const res = document.getElementById('search-results');
+  if (q.length < 2) { res.style.display = 'none'; return; }
+
+  const hits = [];
+  SEARCH_INDEX.forEach(page => {
+    /* Correspondance si un mot de la page commence par la requête,
+       ou si la requête est contenue dans un mot (pour les préfixes courts) */
+    const match = [...page.words].some(w => w.startsWith(q) || (q.length >= 3 && w.includes(q)));
+    if (match) hits.push(page);
+  });
+
+  res.innerHTML = hits.length
+    ? hits.map(h => `<div class="sr-item" onclick="goPage('${h.id}', '${q}')">→ ${h.label}</div>`).join('')
+    : `<div style="color:var(--muted);font-family:sans-serif;font-size:13px;">Aucun résultat pour « ${val} »</div>`;
+  res.style.display = 'block';
+}
+
+function goPage(id, query) {
+  showPage(id, document.querySelectorAll('.nav-bar button')[PAGES.indexOf(id)]);
+  document.getElementById('search-results').style.display = 'none';
+  document.getElementById('search-input').value = '';
+  if (query) highlightPage(id, query);
+}
+
+/* =============================================
+   SURLIGNAGE
+   ============================================= */
+function highlightPage(pageId, query) {
+  // Nettoyer les anciens surlignages
+  clearHighlights();
+
+  const page = document.getElementById('page-' + pageId);
+  if (!page || query.length < 2) return;
+
+  const q = normalize(query);
+
+  // Walker sur les nœuds texte uniquement
+  const walker = document.createTreeWalker(page, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => {
+      const tag = n.parentElement && n.parentElement.tagName;
+      // Ignorer les scripts, styles, balises highlight déjà posées
+      if (['SCRIPT','STYLE','MARK'].includes(tag)) return NodeFilter.FILTER_REJECT;
+      return normalize(n.nodeValue).includes(q) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }
+  });
+
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+
+  let firstMark = null;
+  nodes.forEach(node => {
+    const text = node.nodeValue;
+    const normText = normalize(text);
+    const parts = [];
+    let cursor = 0;
+
+    // Trouver toutes les occurrences (insensible aux accents)
+    let idx;
+    while ((idx = normText.indexOf(q, cursor)) !== -1) {
+      if (idx > cursor) parts.push(document.createTextNode(text.slice(cursor, idx)));
+      const mark = document.createElement('mark');
+      mark.className = 'search-highlight';
+      mark.textContent = text.slice(idx, idx + q.length);
+      parts.push(mark);
+      if (!firstMark) firstMark = mark;
+      cursor = idx + q.length;
+    }
+    if (cursor < text.length) parts.push(document.createTextNode(text.slice(cursor)));
+
+    if (parts.length > 0) {
+      const frag = document.createDocumentFragment();
+      parts.forEach(p => frag.appendChild(p));
+      node.parentNode.replaceChild(frag, node);
+    }
+  });
+
+  // Scroller jusqu'au premier résultat
+  if (firstMark) {
+    setTimeout(() => firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+  }
+
+  // Retirer le surlignage après 4 secondes (fondu)
+  setTimeout(() => clearHighlights(), 4000);
+}
+
+function clearHighlights() {
+  document.querySelectorAll('mark.search-highlight').forEach(mark => {
+    const parent = mark.parentNode;
+    parent.replaceChild(document.createTextNode(mark.textContent), mark);
+    parent.normalize();
+  });
+  // Réinitialiser l'index car le DOM a changé
+  SEARCH_INDEX = null;
+}
+
+/* =============================================
+   MODALES LÉGALES
+   ============================================= */
+function openModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Fermer en cliquant sur l'overlay
+document.querySelectorAll('.modal-overlay').forEach(overlay => {
+  overlay.addEventListener('click', function(e) {
+    if (e.target === this) closeModal(this.id);
+  });
+});
+// Fermer avec Échap
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+  }
+});
+
+
+var MAPS_SRC = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.5!2d2.3063!3d48.8558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6700be7a8cc73%3A0x1!2s21%20Rue%20Chevert%2C%2075007%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1";
+function loadMap() {
+  var container = document.getElementById('mapContainer');
+  var ph = document.getElementById('mapPlaceholder');
+  if (!container || document.getElementById('mapsIframe')) return;
+  var iframe = document.createElement('iframe');
+  iframe.id = 'mapsIframe';
+  iframe.src = MAPS_SRC;
+  iframe.allowFullscreen = true;
+  iframe.loading = 'lazy';
+  iframe.referrerPolicy = 'no-referrer-when-downgrade';
+  iframe.setAttribute('style', 'width:100%;height:100%;border:none;min-height:340px;display:block;');
+  container.insertBefore(iframe, ph);
+  if (ph) ph.style.display = 'none';
+}
+function acceptCookies() {
+  var b = document.getElementById('cookieBanner');
+  if (b) b.classList.add('hidden');
+  try { localStorage.setItem('cookies_ok','1'); } catch(e) {}
+  loadMap();
+}
+function acceptCookiesAndLoadMap() {
+  acceptCookies();
+}
+function refuseCookies() {
+  var b = document.getElementById('cookieBanner');
+  if (b) b.classList.add('hidden');
+  try { localStorage.setItem('cookies_ok','refused'); } catch(e) {}
+}
+(function() {
+  try {
+    var ck = localStorage.getItem('cookies_ok');
+    if (ck === '1' || ck === 'refused') {
+      var b = document.getElementById('cookieBanner');
+      if (b) b.classList.add('hidden');
+    }
+    if (ck === '1') {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', loadMap);
+      } else {
+        loadMap();
+      }
+    }
+  } catch(e) {}
+})();
+</script>
+
+<!-- Bandeau consentement cookies -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Ce site utilise Google Maps pour l'affichage de la carte. En continuant, vous acceptez l'utilisation de cookies tiers. 
+  <a onclick="openModal('modal-confidentialite');return false;" href="#">En savoir plus</a></p>
+  <div class="cookie-btns">
+    <button class="cookie-btn" onclick="acceptCookies()">J'accepte</button>
+    <button class="cookie-btn-refuse" onclick="refuseCookies()">Je refuse</button>
+  </div>
+</div>
+</body>
+</html>
