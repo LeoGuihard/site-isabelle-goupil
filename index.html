@@ -413,6 +413,77 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
 mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding:0 1px;
   animation:hl-fade 4s forwards;}
 @keyframes hl-fade{0%,70%{background:#fff176;}100%{background:transparent;}}
+
+/* ── CORRECTIFS MOBILES SUPPLÉMENTAIRES ── */
+
+/* Nav : bloquer le scroll vertical accidentel lors du swipe horizontal */
+@media (max-width: 768px) {
+  .nav-bar {
+    touch-action: pan-x;
+    overflow-y: clip;
+    overscroll-behavior-x: contain;
+  }
+  /* Footer : bouton carte de visite plus visible */
+  .cv-dl-btn {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  /* Bilan strips : liens pleine largeur */
+  .bilan-strip-body { flex-direction: column; }
+  .bilan-strip-links { flex-direction: column; width: 100%; }
+  .bilan-strip-links a { text-align: center; width: 100%; box-sizing: border-box; }
+  /* Empêcher débordement horizontal de la page */
+  body { overflow-x: hidden; }
+}
+
+/* Tableau vaccins → cartes sur mobile */
+@media (max-width: 600px) {
+  .vacc-table thead { display: none; }
+  .vacc-table,
+  .vacc-table tbody,
+  .vacc-table tr,
+  .vacc-table td { display: block; width: 100%; }
+  .vacc-table tr {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .vacc-table td { padding: 9px 14px; border-bottom: 1px solid var(--border); }
+  .vacc-table td:last-child { border-bottom: none; }
+  .vacc-table td:first-child {
+    background: var(--navy);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 14px;
+  }
+  .vacc-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--rose);
+    margin-bottom: 3px;
+  }
+  .vacc-table td:first-child::before { display: none; }
+  .vacc-table tr:nth-child(even) td { background: unset; }
+  .vacc-table tr:nth-child(even) td:first-child { background: var(--navy); }
+}
+
 /* FOOTER */
 .footer{background:#1a2330;color:rgba(255,255,255,0.62);padding:28px 56px 16px;font-family:'Inter',sans-serif;font-size:12px;}
 .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);}
@@ -985,13 +1056,13 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         <tr><th>Vaccin</th><th>Indication principale</th><th>Population concernée</th></tr>
       </thead>
       <tbody>
-        <tr><td>HPV</td><td>Prévention des cancers du col de l'utérus</td><td>11 - 26 ans</td></tr>
-        <tr><td>Méningocoques ACWY &amp; B</td><td>Prévention des méningites bactériennes</td><td>Adolescents et jeunes adultes</td></tr>
-        <tr><td>DTPCa</td><td>Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td>Rappels tout au long de la vie</td></tr>
-        <tr><td>Hépatite B</td><td>Prévention de l'hépatite B</td><td>Non immunisés, professionnels de santé</td></tr>
-        <tr><td>Grippe</td><td>Prévention de la grippe saisonnière</td><td>Annuel, personnes à risque et grossesse</td></tr>
-        <tr><td>Rophylac</td><td>Prévention de l'allo-immunisation rhésus</td><td>Femmes enceintes de groupe Rhésus négatif</td></tr>
-        <tr><td>COVID-19</td><td>Prévention des formes graves</td><td>Selon recommandations en vigueur</td></tr>
+        <tr><td>HPV</td><td data-label="Indication">Prévention des cancers du col de l'utérus</td><td data-label="Population">11 - 26 ans</td></tr>
+        <tr><td>Méningocoques ACWY &amp; B</td><td data-label="Indication">Prévention des méningites bactériennes</td><td data-label="Population">Adolescents et jeunes adultes</td></tr>
+        <tr><td>DTPCa</td><td data-label="Indication">Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td data-label="Population">Rappels tout au long de la vie</td></tr>
+        <tr><td>Hépatite B</td><td data-label="Indication">Prévention de l'hépatite B</td><td data-label="Population">Non immunisés, professionnels de santé</td></tr>
+        <tr><td>Grippe</td><td data-label="Indication">Prévention de la grippe saisonnière</td><td data-label="Population">Annuel, personnes à risque et grossesse</td></tr>
+        <tr><td>Rophylac</td><td data-label="Indication">Prévention de l'allo-immunisation rhésus</td><td data-label="Population">Femmes enceintes de groupe Rhésus négatif</td></tr>
+        <tr><td>COVID-19</td><td data-label="Indication">Prévention des formes graves</td><td data-label="Population">Selon recommandations en vigueur</td></tr>
       </tbody>
     </table>
     <p class="vacc-note">Les recommandations vaccinales évoluent. Consultez <a href="https://www.ameli.fr" target="_blank" style="color:var(--accent1)">ameli.fr</a> ou le calendrier vaccinal officiel pour les dernières mises à jour.</p>
@@ -1021,7 +1092,10 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       Email : <a href="mailto:guihardleo@gmail.com">guihardleo@gmail.com</a></p>
 
       <h3>Hébergement du site</h3>
-      <p><em>À compléter après mise en ligne (nom de l'hébergeur, adresse, site web).</em></p>
+      <p><strong>GitHub, Inc.</strong><br>
+       88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
+      Site web : <a href="https://github.com" target="_blank" rel="noopener">github.com</a><br>
+      Service : <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> — hébergement statique gratuit</p>
 
       <h3>Propriété intellectuelle</h3>
       <p>L'ensemble des contenus présents sur ce site (textes, structure, visuels) est la propriété exclusive d'Isabelle Goupil, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
@@ -1163,7 +1237,7 @@ function normalize(s) {
 function pageWords(id) {
   const el = document.getElementById('page-' + id);
   if (!el) return [];
-  return normalize(el.innerText).match(/\w+/g) || [];
+  return normalize(el.textContent).match(/\w+/g) || [];
 }
 
 /* Construit l'index une seule fois après chargement */
