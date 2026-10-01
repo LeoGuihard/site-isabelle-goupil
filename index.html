@@ -69,14 +69,14 @@
    Dossier : C:\Users\guiha\Documents\Site_mam\site-isabelle-goupil\
    ============================================= */
 *{box-sizing:border-box;margin:0;padding:0;}
-html{overflow-x:hidden;max-width:100vw;font-size:clamp(14px, 1.1vw, 18px);}
+html{overflow-x:clip;max-width:100vw;font-size:clamp(14px, 1.1vw, 18px);}
 :root{
   --navy:#1e2d3d;--sage:#6b9071;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
   --text:#2a2624;--muted:#6b6460;--white:#fff;--border:#e2ddd8;
   --cream:#fdfaf7;--rose:#c0607a;--rose-light:#fde8f0;
   --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
 }
-body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-size:16px;line-height:1.75;overflow-x:hidden;max-width:100vw;}
+body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-size:16px;line-height:1.75;overflow-x:clip;}
 .wrap{width:100%;max-width:1600px;margin:0 auto;background:var(--cream);box-shadow:0 0 60px rgba(0,0,0,0.06);min-height:100vh;display:flex;flex-direction:column;}
 
 /* ── HEADER asymétrique ── */
@@ -507,7 +507,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   .bilan-strip-links { flex-direction: column; width: 100%; }
   .bilan-strip-links a { text-align: center; width: 100%; box-sizing: border-box; }
   /* Empêcher débordement horizontal de la page */
-  body { overflow-x: hidden; }
+  body { overflow-x: clip; }
 }
 
 /* Tableau vaccins → cartes sur mobile */
