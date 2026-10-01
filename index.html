@@ -69,14 +69,15 @@
    Dossier : C:\Users\guiha\Documents\Site_mam\site-isabelle-goupil\
    ============================================= */
 *{box-sizing:border-box;margin:0;padding:0;}
+html{overflow-x:hidden;max-width:100vw;}
 :root{
   --navy:#1e2d3d;--sage:#6b9071;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
   --text:#2a2624;--muted:#6b6460;--white:#fff;--border:#e2ddd8;
   --cream:#fdfaf7;--rose:#c0607a;--rose-light:#fde8f0;
   --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
 }
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.75;}
-.wrap{width:100%;background:var(--cream);}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.75;overflow-x:hidden;max-width:100vw;}
+.wrap{width:100%;max-width:100vw;overflow-x:hidden;background:var(--cream);}
 
 /* ── HEADER asymétrique ── */
 .hero-header{background:var(--cream);padding:28px 48px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0;}
