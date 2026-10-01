@@ -69,15 +69,15 @@
    Dossier : C:\Users\guiha\Documents\Site_mam\site-isabelle-goupil\
    ============================================= */
 *{box-sizing:border-box;margin:0;padding:0;}
-html{overflow-x:hidden;max-width:100vw;}
+html{overflow-x:hidden;max-width:100vw;font-size:clamp(14px, 1.1vw, 18px);}
 :root{
   --navy:#1e2d3d;--sage:#6b9071;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
   --text:#2a2624;--muted:#6b6460;--white:#fff;--border:#e2ddd8;
   --cream:#fdfaf7;--rose:#c0607a;--rose-light:#fde8f0;
   --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
 }
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:16px;line-height:1.75;overflow-x:hidden;max-width:100vw;}
-.wrap{width:100%;max-width:100vw;overflow-x:hidden;background:var(--cream);}
+body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-size:16px;line-height:1.75;overflow-x:hidden;max-width:100vw;}
+.wrap{width:100%;max-width:1600px;margin:0 auto;overflow-x:hidden;background:var(--cream);box-shadow:0 0 60px rgba(0,0,0,0.06);}
 
 /* ── HEADER asymétrique ── */
 .hero-header{background:var(--cream);padding:28px 48px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0;}
@@ -372,10 +372,11 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
 
   /* ── Formation : frise en colonne ── */
   .tl-category{padding:16px 14px;}
-  .tl-horiz{flex-direction:column;gap:0;}
+  .tl-horiz{flex-direction:column-reverse;gap:0;}
   .tl-horiz::before{display:none;}
   .tl-node{flex-direction:row;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
-  .tl-node:last-child{border-bottom:none;}
+  .tl-node:first-child{border-bottom:none;}
+  .tl-node:last-child{border-bottom:1px solid var(--border);}
   .tl-node-dot{margin-bottom:0;margin-top:2px;flex-shrink:0;}
   .tl-node-content{text-align:left;}
   .tl-node-tip{width:100%;left:0;transform:none;margin-top:8px;}
