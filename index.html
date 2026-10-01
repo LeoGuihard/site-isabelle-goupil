@@ -446,27 +446,26 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
   .home-grid{grid-template-columns:1fr;}
   .grid-2{grid-template-columns:1fr;}
   .grid-3{grid-template-columns:1fr;}
-  .footer{padding:0 0 10px;}
+  .footer{padding:0 0 10px;overflow:visible;}
   .footer-grid{
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
     gap:0;
+    scroll-snap-type:x mandatory;
+    overscroll-behavior-x:contain;
   }
   .footer-col{
+    flex:0 0 72vw;
+    min-width:200px;
     padding:18px 20px;
-    border-bottom:1px solid rgba(255,255,255,0.12);
-    background:rgba(255,255,255,0.03);
-  }
-  .footer-col:first-child{
-    border-top:none;
+    border-right:1px solid rgba(255,255,255,0.12);
+    scroll-snap-align:start;
   }
   .footer-col:last-child{
-    border-bottom:none;
-    background:rgba(255,255,255,0.06);
-  }
-  .footer-col h4{
-    font-size:8.5px;
-    margin-bottom:8px;
+    border-right:none;
   }
   .sticky-nav{top:0;}
 }
