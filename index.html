@@ -554,6 +554,26 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 .footer-col a:hover{color:#fff;}
 .cv-dl-btn{display:inline-block;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.16);color:rgba(255,255,255,0.8);padding:5px 12px;border-radius:3px;font-size:11px;text-decoration:none;margin-top:3px;}
 .footer-bottom{text-align:center;}
+/* Indicateur scroll footer mobile */
+.footer-scroll-hint{display:none;}
+@media(max-width:700px){
+  .footer-scroll-hint{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    padding:10px 0 6px;
+  }
+  .footer-scroll-hint span{
+    display:block;
+    height:3px;
+    border-radius:2px;
+    background:rgba(255,255,255,0.25);
+    transition:background .2s,width .2s;
+  }
+  .footer-scroll-hint span:first-child{width:22px;background:rgba(255,255,255,0.75);}
+  .footer-scroll-hint span:not(:first-child){width:14px;}
+}
 .footer-links a{color:rgba(255,255,255,0.3);text-decoration:none;margin:0 10px;font-size:11px;letter-spacing:.02em;}
 .footer-links a:hover{color:#fff;}
 
@@ -1235,6 +1255,9 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       <a class="cv-dl-btn" href="docs/carte_visite.pdf" target="_blank">📄 Télécharger la carte de visite (PDF)</a>
     </div>
   </div>
+  <div class="footer-scroll-hint" id="footerDots">
+    <span></span><span></span><span></span>
+  </div>
   <div class="footer-bottom">
     <div class="footer-links">
       <a href="#" onclick="openModal('modal-mentions');return false;">Mentions légales</a>
@@ -1495,6 +1518,25 @@ function refuseCookies() {
       }
     }
   } catch(e) {}
+})();
+
+/* =============================================
+   FOOTER SCROLL DOTS
+   ============================================= */
+(function() {
+  var grid = document.querySelector('.footer-grid');
+  var dots = document.querySelectorAll('#footerDots span');
+  if (!grid || !dots.length) return;
+  function updateDots() {
+    var total = grid.scrollWidth - grid.clientWidth;
+    var idx = total > 0 ? Math.round((grid.scrollLeft / total) * (dots.length - 1)) : 0;
+    dots.forEach(function(d, i) {
+      d.style.width = i === idx ? '22px' : '14px';
+      d.style.background = i === idx ? 'rgba(255,255,255,0.8)' : 'rgba(255,255,255,0.25)';
+    });
+  }
+  grid.addEventListener('scroll', updateDots, {passive:true});
+  updateDots();
 })();
 
 /* =============================================
