@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="EaJxoCCtiZ4vTzZtS2JBBfyW6_cSKPJgnhRqMzBJkp8" />
 <!-- SEO & Référencement -->
-<meta name="description" content="Isabelle Goupil, Sage-Femme conventionnée à Paris 7e. Suivi gynécologique, grossesse, post-natal, préparation à la naissance, bilans de prévention. 21 rue Chevert, 75007 Paris.">
-<meta name="keywords" content="sage-femme, Paris 7, Paris 7e, gynécologie, grossesse, maternité, post-natal, préparation naissance, contraception, vaccination, bilans de prévention, Chevert">
+<meta name="description" content="Isabelle Goupil, Sage-Femme conventionnée Paris 7e et Paris 15e. Suivi gynécologique, grossesse, post-natal, préparation à la naissance, bilans de prévention, vaccination. 21 rue Chevert, 75007 Paris.">
+<meta name="keywords" content="sage-femme, sage-femme paris, sage femme paris, sage-femme paris 7, sage femme paris 7, sage-femme paris 7e, sage femme paris 7e, sage-femme paris 15, sage femme paris 15, sage-femme paris 15e, sage femme paris 15e, gynécologie, grossesse, maternité, post-natal, préparation naissance, contraception, vaccination, bilans de prévention, 21 rue Chevert, 75007 Paris">
 <meta name="author" content="Isabelle Goupil">
 <meta name="robots" content="index, follow">
 <meta name="language" content="fr">
@@ -14,12 +15,53 @@
 <meta property="og:description" content="Sage-Femme conventionnée au 21 rue Chevert, 75007 Paris. Suivi gynécologique, grossesse, préparation à la naissance, bilans de prévention.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:image" content="photo_cabinet.jpg">
+<meta property="og:url" content="https://isabelle-goupil-sage-femme.fr/">
+<meta property="og:image" content="https://isabelle-goupil-sage-femme.fr/docs/Image_page_accueil.png">
+<!-- JSON-LD structured data pour SEO local -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Isabelle Goupil — Sage-Femme",
+  "description": "Sage-femme libérale conventionnée à Paris 7e. Suivi gynécologique, grossesse, post-natal, bilans de prévention, vaccination.",
+  "url": "https://isabelle-goupil-sage-femme.fr",
+  "telephone": "+33699356875",
+  "email": "isabelle.goupil@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "21 rue Chevert",
+    "postalCode": "75007",
+    "addressLocality": "Paris",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8558,
+    "longitude": 2.3063
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:30",
+      "closes": "19:00"
+    }
+  ],
+  "medicalSpecialty": "Midwifery",
+  "priceRange": "Conventionnée secteur 1",
+  "areaServed": ["Paris 7e", "Paris 15e", "Paris"],
+  "image": "https://isabelle-goupil-sage-femme.fr/docs/Image_page_accueil.png",
+  "sameAs": [
+    "https://www.doctolib.fr/sage-femme/paris/isabelle-goupil"
+  ]
+}
+</script>
 <!-- Favicon inline (rose sage-femme) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a2e49'/><text y='44' x='50%' text-anchor='middle' font-size='36' font-family='Georgia,serif' fill='%23e0a0bc'>♀</text></svg>">
+<link rel="canonical" href="https://isabelle-goupil-sage-femme.fr/">
 <title>Isabelle Goupil — Sage-Femme Paris 7e</title>
 <style>
 /* =============================================
@@ -404,7 +446,18 @@ body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);fo
   .grid-2{grid-template-columns:1fr;}
   .grid-3{grid-template-columns:1fr;}
   .footer{padding:24px 20px 14px;}
-  .footer-grid{grid-template-columns:1fr;}
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+  .footer-col{
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.10);
+  }
+  .footer-col:last-child{
+    border-bottom:none;
+    padding-bottom:4px;
+  }
   .sticky-nav{top:0;}
 }
 
@@ -1303,6 +1356,21 @@ function highlightPage(pageId, query) {
   const nodes = [];
   while (walker.nextNode()) nodes.push(walker.currentNode);
 
+  // Ouvrir automatiquement les conteneurs repliés qui contiennent un résultat
+  nodes.forEach(node => {
+    const el = node.parentElement;
+    if (!el) return;
+    // .home-card (accueil)
+    const homeCard = el.closest('.home-card');
+    if (homeCard && !homeCard.classList.contains('open')) homeCard.classList.add('open');
+    // .gc-detail (grossesse)
+    const gcDetail = el.closest('.gc-detail');
+    if (gcDetail && !gcDetail.classList.contains('open')) gcDetail.classList.add('open');
+    // .tl-node (formation — on ouvre le nœud, pas besoin de fermer les voisins ici)
+    const tlNode = el.closest('.tl-node');
+    if (tlNode && !tlNode.classList.contains('open')) tlNode.classList.add('open');
+  });
+
   let firstMark = null;
   nodes.forEach(node => {
     const text = node.nodeValue;
@@ -1418,6 +1486,30 @@ function refuseCookies() {
       }
     }
   } catch(e) {}
+})();
+
+/* =============================================
+   ANTI PINCH-ZOOM SNAP-BACK
+   Quand l'utilisateur dézoom sous 1×, on remet le viewport à 1×
+   ============================================= */
+(function() {
+  if (!window.visualViewport) return;
+  var resetTimer = null;
+  function resetZoom() {
+    if (window.visualViewport.scale < 0.98) {
+      // Remettre à 1 en remplaçant la meta viewport momentanément
+      var meta = document.querySelector('meta[name="viewport"]');
+      if (!meta) return;
+      meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0';
+      setTimeout(function() {
+        meta.content = 'width=device-width, initial-scale=1.0';
+      }, 300);
+    }
+  }
+  window.visualViewport.addEventListener('resize', function() {
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(resetZoom, 150);
+  });
 })();
 </script>
 
