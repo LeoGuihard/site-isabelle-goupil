@@ -641,6 +641,40 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 
 /* ── TEXTE JUSTIFIÉ mentions + confidentialité ── */
 #modal-mentions p, #modal-confidentialite p {text-align:justify;}
+
+/* ── SCROLL REVEAL ── */
+.scroll-reveal{
+  opacity:0;
+  transform:translateY(32px);
+  transition:opacity 0.55s cubic-bezier(.4,0,.2,1), transform 0.55s cubic-bezier(.4,0,.2,1);
+}
+.scroll-reveal.reveal-visible{
+  opacity:1;
+  transform:none;
+}
+/* délai pour enchaîner les sections */
+.scroll-reveal.delay-1{ transition-delay:0.12s; }
+.scroll-reveal.delay-2{ transition-delay:0.24s; }
+
+/* séparateur de section accueil */
+.home-section-label{
+  font-family:'Inter',sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:38px 0 18px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.home-section-label::before,.home-section-label::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
 </style>
 </head>
 <body>
@@ -688,7 +722,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 
 <!-- ===== PAGE 1 : ACCUEIL ===== -->
 <div class="page active" id="page-accueil">
-  <div class="home-hero">
+  <div class="home-hero scroll-reveal">
     <div class="home-hero-text">
       <h2>Consultation de contraception &amp; suivi gynécologique</h2>
       <p>Isabelle Goupil, sage-femme conventionnée à Paris 7<sup>e</sup>, vous accompagne tout au long de votre vie gynécologique — de la première consultation à la ménopause, en passant par la grossesse et le post-natal.</p>
@@ -697,7 +731,8 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
     </div>
     <img class="home-img" src="docs/Image_page_accueil.png" alt="Consultation sage-femme" onerror="this.style.background='#e8f0e9';this.style.minHeight='270px';">
   </div>
-  <div class="home-services">
+  <div class="home-section-label scroll-reveal delay-1">Mes consultations</div>
+  <div class="home-services scroll-reveal delay-2">
     <div class="home-card gyneco" onclick="this.classList.toggle('open')">
       <div class="home-card-header">
         <h3>Suivi gynécologique</h3>
@@ -738,7 +773,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   <p style="font-family:sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:28px;">Cliquez sur les points pour afficher les détails.</p>
 
   <!-- FRISE 1 : Expériences -->
-  <div class="tl-category exp-cat">
+  <div class="tl-category exp-cat scroll-reveal">
     <div class="tl-cat-header">
       <span class="tl-cat-badge exp">Expériences professionnelles</span>
       <div class="tl-cat-line"></div>
@@ -772,7 +807,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   </div>
 
   <!-- FRISE 2 : Diplômes -->
-  <div class="tl-category dip-cat">
+  <div class="tl-category dip-cat scroll-reveal delay-1">
     <div class="tl-cat-header">
       <span class="tl-cat-badge dip">Diplômes</span>
       <div class="tl-cat-line"></div>
@@ -806,7 +841,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   </div>
 
   <!-- FRISE 3 : Formations continues -->
-  <div class="tl-category form-cat">
+  <div class="tl-category form-cat scroll-reveal delay-2">
     <div class="tl-cat-header">
       <span class="tl-cat-badge form">Formations continues</span>
       <div class="tl-cat-line"></div>
@@ -888,7 +923,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 <!-- ===== PAGE 3 : CABINET ===== -->
 <div class="page" id="page-cabinet">
   <h2 class="page-title">Le cabinet</h2>
-  <div class="cabinet-layout">
+  <div class="cabinet-layout scroll-reveal">
     <div class="cab-left">
       <div class="info-block">
         <div class="block-label">Adresse</div>
@@ -933,8 +968,8 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       </div>
     </div>
   </div>
-  <h3 style="font-family:sans-serif;font-size:10.5px;color:#555;letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700;">Photos du cabinet</h3>
-  <div class="photos-grid">
+  <h3 style="font-family:sans-serif;font-size:10.5px;color:#555;letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700;" class="scroll-reveal">Photos du cabinet</h3>
+  <div class="photos-grid scroll-reveal delay-1">
     <div class="photo-item">
       <img class="cabinet-photo" src="docs/photo_cabinet_entree.jpeg" alt="Entrée" onerror="this.style.background='#e8f0e9';">
       <span class="photo-caption">Entrée</span>
@@ -1270,13 +1305,41 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 /* =============================================
    NAVIGATION
    ============================================= */
+/* =============================================
+   SCROLL REVEAL — IntersectionObserver
+   ============================================= */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal-visible');
+    }
+  });
+}, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+
+function initReveal(page) {
+  page.querySelectorAll('.scroll-reveal').forEach(el => {
+    el.classList.remove('reveal-visible');
+    revealObserver.unobserve(el);
+    revealObserver.observe(el);
+  });
+}
+
 function showPage(id, btn) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-bar button').forEach(b => b.classList.remove('active'));
-  document.getElementById('page-' + id).classList.add('active');
+  const newPage = document.getElementById('page-' + id);
+  newPage.classList.add('active');
   btn.classList.add('active');
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Réinitialise et observe les sections de la nouvelle page
+  setTimeout(() => initReveal(newPage), 80);
 }
+
+// Init au chargement pour la page active
+document.addEventListener('DOMContentLoaded', () => {
+  const activePage = document.querySelector('.page.active');
+  if (activePage) initReveal(activePage);
+});
 
 /* =============================================
    FRISE FORMATION — clic sur le point ou le texte
