@@ -1018,6 +1018,46 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
   .home-banner-text{padding:20px 18px 22px;}
   .home-section-label{margin:28px 0 16px;}
 }
+
+/* ===== C5 : texte justifié, cases d'accueil plus basses, page Grossesse recolorée ===== */
+.home-banner-text p:not(.eyebrow){text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto;hyphenate-limit-chars:6 3 3;}
+@media (max-width: 860px){ .home-banner-text p:not(.eyebrow){font-size:.92em;line-height:1.65;} }
+
+:root{--card-h:222px;}
+.home-card-media{height:var(--card-h);}
+.home-card-header{top:var(--card-h);padding:44px 20px 15px;}
+.home-card h3{font-size:1.14em;}
+@media (max-width: 860px){
+  :root{--card-h:clamp(150px,41vw,200px);}
+  .home-card-media{height:var(--card-h);}
+  .home-card-header{top:var(--card-h);padding:26px 18px 14px;}
+}
+
+/* Page Grossesse & Post-natal : deux tons, bleu et sable */
+.section-label.pre{background:#187a9d;}
+.section-label.post{background:#9a5f33;}
+.gc-face.c1,.gc-face.c2,.gc-face.c3{background:#f6efe7;border-color:#e6d2ba;border-left:4px solid #c08a55;}
+.gc-face.c4,.gc-face.c5,.gc-face.c6{background:#e8f3f7;border-color:#bcd9e4;border-left:4px solid #1d87ad;}
+.gc-face.c1 .gc-tarif,.gc-face.c2 .gc-tarif,.gc-face.c3 .gc-tarif{color:#8a5226;}
+.gc-face.c4 .gc-tarif,.gc-face.c5 .gc-tarif,.gc-face.c6 .gc-tarif{color:#11536c;}
+.gc-face:hover{box-shadow:0 6px 18px rgba(22,70,90,.10);}
+.gc-detail{border-color:#e3e8ea;box-shadow:0 2px 10px rgba(22,70,90,.06);}
+.gc-detail ul li::before{color:#c08a55;}
+.pn-step.s1,.pn-step.s3,.pn-step.s5{background:#f6efe7;border-left:4px solid #c08a55;}
+.pn-step.s2,.pn-step.s4{background:#e8f3f7;border-left:4px solid #1d87ad;}
+.pn-step.s1 .pn-num,.pn-step.s3 .pn-num,.pn-step.s5 .pn-num{background:#9a5f33;}
+.pn-step.s2 .pn-num,.pn-step.s4 .pn-num{background:#187a9d;}
+.pn-step .pn-zone{color:#187a9d;}
+
+/* ===== C6 : sur téléphone, alternance sable / bleu dans la liste Prénatal ===== */
+@media (max-width: 768px) {
+  .grossesse-grid .gc-wrap:nth-child(1){order:1;}
+  .grossesse-grid .gc-wrap:nth-child(2){order:2;}
+  .grossesse-grid .gc-wrap:nth-child(3){order:4;}
+  .grossesse-grid .gc-wrap:nth-child(4){order:3;}
+  .grossesse-grid .gc-wrap:nth-child(5){order:5;}
+  .grossesse-grid .gc-wrap:nth-child(6){order:6;}
+}
 </style>
 </head>
 <body>
@@ -1033,7 +1073,7 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
   </div>
   <div class="topline-info">
     <span class="addr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
-    <a class="tel" href="tel:+33699356875">06 99 35 68 75</a>
+    <a class="tel" href="sms:+33699356875" title="Envoyer un SMS" aria-label="Envoyer un SMS au 06 99 35 68 75">06 99 35 68 75</a>
   </div>
 </div>
 
@@ -1060,7 +1100,7 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
   </nav>
   <div class="menu-info">
     <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
-    <a href="tel:+33699356875">06 99 35 68 75</a>
+    <a href="sms:+33699356875" title="Envoyer un SMS" aria-label="Envoyer un SMS au 06 99 35 68 75">06 99 35 68 75</a>
   </div>
 </div>
 <div class="menu-veil" onclick="toggleMenu(false)"></div>
@@ -1374,7 +1414,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c1" onclick="toggleCard(this)">
         <h3>Bilan préconceptionnel</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">50 €</div>
       </div>
       <div class="gc-detail">Consultation pour préparer la grossesse dans les meilleures conditions.</div>
     </div>
@@ -1382,7 +1421,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c5" onclick="toggleCard(this)">
         <h3>Consultations mensuelles</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">50 €</div>
       </div>
       <div class="gc-detail">Suivi mensuel jusqu'au retour vers la maternité choisie.</div>
     </div>
@@ -1390,7 +1428,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c5" onclick="toggleCard(this)">
         <h3>Entretien prénatal</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">75 €</div>
       </div>
       <div class="gc-detail">Le conjoint est toujours le bienvenu pour cet entretien d'accompagnement personnalisé.</div>
     </div>
@@ -1398,7 +1435,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c1" onclick="toggleCard(this)">
         <h3>Monitoring de surveillance</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">80 €</div>
       </div>
       <div class="gc-detail">Réalisé uniquement au cabinet pour assurer un suivi de proximité.</div>
     </div>
@@ -1406,7 +1442,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c1" onclick="toggleCard(this)">
         <h3>Séances individuelles</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">88,40 €</div>
       </div>
       <div class="gc-detail">
         <strong style="color:var(--navy);display:block;margin-bottom:8px;">À la carte</strong>
@@ -1426,7 +1461,6 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
       <div class="gc-face c5" onclick="toggleCard(this)">
         <h3>Séances collectives</h3>
         <div class="hint">↓ cliquer pour le détail</div>
-        <div class="gc-tarif">37,12 €</div>
       </div>
       <div class="gc-detail">
         <strong style="color:var(--navy);display:block;margin-bottom:6px;">Maternité Sainte Félicité — 7 rue Casablanca, 75015 Paris</strong>
