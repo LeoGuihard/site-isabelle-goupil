@@ -1058,6 +1058,18 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
   .grossesse-grid .gc-wrap:nth-child(5){order:5;}
   .grossesse-grid .gc-wrap:nth-child(6){order:6;}
 }
+
+/* ===== C7 : bande du haut sans adresse, lien de message Doctolib ===== */
+.topline-info .msg,.menu-info .msg{display:inline-flex;align-items:center;gap:7px;}
+.topline-info .msg .ic{width:15px;height:15px;}
+@media (max-width: 1100px){ .topline-info .msg{display:inline-flex;} }
+/* dégradé du titre plus court : l'image reste lisible */
+.home-card-header{padding-top:30px;}
+@media (max-width: 860px){
+  .home-card-header{padding-top:22px;}
+  .menu-info .msg{padding-left:0;}
+  .menu-info .msg .ic{width:17px;height:17px;}
+}
 </style>
 </head>
 <body>
@@ -1072,8 +1084,7 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
     <div class="search-results" id="search-results"></div>
   </div>
   <div class="topline-info">
-    <span class="addr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
-    <a class="tel" href="sms:+33699356875" title="Envoyer un SMS" aria-label="Envoyer un SMS au 06 99 35 68 75">06 99 35 68 75</a>
+    <a class="msg" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil/patient-request/master-patient?messagingProfileId=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1UazNPVGc0IiwiZXhwIjpudWxsLCJwdXIiOiJwYXRpZW50X21lc3NhZ2luZ19wcm8vcHJvZmlsZSJ9fQ--f6b1bf1efeb321bc8afe484d61c21fda6fbddc1fa0fd2a10f3e3b7171924ca48&amp;category=message" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,7 12,13 21,7"/></svg><span>Envoyer un message</span></a>
   </div>
 </div>
 
@@ -1099,8 +1110,7 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
     <button onclick="showPage('bilans',this)">Bilans de prévention &amp; Vaccins</button>
   </nav>
   <div class="menu-info">
-    <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
-    <a href="sms:+33699356875" title="Envoyer un SMS" aria-label="Envoyer un SMS au 06 99 35 68 75">06 99 35 68 75</a>
+    <a class="msg" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil/patient-request/master-patient?messagingProfileId=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1UazNPVGc0IiwiZXhwIjpudWxsLCJwdXIiOiJwYXRpZW50X21lc3NhZ2luZ19wcm8vcHJvZmlsZSJ9fQ--f6b1bf1efeb321bc8afe484d61c21fda6fbddc1fa0fd2a10f3e3b7171924ca48&amp;category=message" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3,7 12,13 21,7"/></svg><span>Envoyer un message</span></a>
   </div>
 </div>
 <div class="menu-veil" onclick="toggleMenu(false)"></div>
