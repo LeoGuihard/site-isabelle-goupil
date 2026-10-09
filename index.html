@@ -59,7 +59,7 @@
 <!-- Favicon inline (rose sage-femme) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a2e49'/><text y='44' x='50%' text-anchor='middle' font-size='36' font-family='Georgia,serif' fill='%23e0a0bc'>♀</text></svg>">
 <link rel="canonical" href="https://isabelle-goupil-sage-femme.fr/">
 <title>Isabelle Goupil — Sage-Femme Paris 7e</title>
@@ -70,41 +70,41 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{overflow-x:clip;font-size:clamp(14px, 1.1vw, 18px);}
 :root{
-  --navy:#1e2d3d;--sage:#6b9071;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
+  --navy:#1e2d3d;--sage:#6b9071;--green:#4f7d5f;--sage-light:#f0f4f0;--sage-mid:#a8c4ab;
   --text:#2a2624;--muted:#6b6460;--white:#fff;--border:#e2ddd8;
   --cream:#fdfaf7;--rose:#c0607a;--rose-light:#fde8f0;
   --accent1:#4a7fa8;--accent2:#8f6baa;--accent3:#c07a5a;--accent4:#a8965a;--accent5:#5a9c8f;
 }
-body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-size:16px;line-height:1.75;overflow-x:clip;}
+body{font-family:var(--f-body);background:#e8e4df;color:var(--text);font-size:16px;line-height:1.75;overflow-x:clip;}
 .wrap{width:100%;max-width:1600px;margin:0 auto;background:var(--cream);box-shadow:0 0 60px rgba(0,0,0,0.06);min-height:100vh;display:flex;flex-direction:column;}
 
 /* ── HEADER asymétrique ── */
 .hero-header{background:var(--cream);padding:28px 48px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:0;}
 .hero-header-inner{display:flex;align-items:baseline;gap:0;border-left:3px solid var(--rose);padding-left:20px;}
 .hero-header-text{display:flex;flex-direction:column;}
-.hero-header h1{font-family:'Playfair Display',Georgia,serif;font-size:2.05em;color:var(--navy);font-weight:500;letter-spacing:0.01em;line-height:1.1;}
-.hero-header .subtitle{font-family:'Inter',sans-serif;font-size:0.72em;color:var(--rose);letter-spacing:0.18em;text-transform:uppercase;margin-top:5px;font-weight:400;}
+.hero-header h1{font-family:var(--f-title);font-size:2.05em;color:var(--navy);font-weight:500;letter-spacing:0.01em;line-height:1.1;}
+.hero-header .subtitle{font-family:var(--f-body);font-size:0.72em;color:var(--rose);letter-spacing:0.18em;text-transform:uppercase;margin-top:5px;font-weight:400;}
 
 /* ── STICKY TOP (bandeau RDV — toujours en haut) ── */
 .sticky-top{position:sticky;top:0;z-index:101;box-shadow:0 1px 0 rgba(0,0,0,0.08);}
 /* ── STICKY NAV ── */
 .sticky-nav{position:sticky;top:42px;z-index:100;box-shadow:0 1px 0 rgba(0,0,0,0.06);}
 .top-bar{background:var(--navy);display:flex;justify-content:space-between;align-items:center;padding:9px 48px;gap:16px;}
-.top-bar a.rdv-link{color:rgba(255,255,255,0.6);text-decoration:none;font-family:'Inter',sans-serif;font-size:12.5px;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:400;letter-spacing:.01em;}
+.top-bar a.rdv-link{color:rgba(255,255,255,0.6);text-decoration:none;font-family:var(--f-body);font-size:12.5px;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:400;letter-spacing:.01em;}
 .top-bar a.rdv-link:hover{color:#fff;}
 .rdv-icon{width:13px;height:13px;stroke:rgba(255,255,255,0.55);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
-.addr-wrap{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.45);font-family:'Inter',sans-serif;font-size:11.5px;white-space:nowrap;}
+.addr-wrap{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,0.45);font-family:var(--f-body);font-size:11.5px;white-space:nowrap;}
 .addr-icon{width:11px;height:11px;stroke:rgba(255,255,255,0.35);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 .top-search{display:flex;align-items:center;flex:1;max-width:240px;margin:0 auto;}
-.top-search input{width:100%;border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:4px 14px;font-size:12px;font-family:'Inter',sans-serif;outline:none;background:rgba(255,255,255,0.07);color:#fff;transition:border-color .2s,background .2s;}
+.top-search input{width:100%;border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:4px 14px;font-size:12px;font-family:var(--f-body);outline:none;background:rgba(255,255,255,0.07);color:#fff;transition:border-color .2s,background .2s;}
 .top-search input:focus{border-color:rgba(255,255,255,0.28);background:rgba(255,255,255,0.12);}
 .top-search input::placeholder{color:rgba(255,255,255,0.3);}
 /* Nav bar */
 .nav-bar{background:#fff;display:flex;justify-content:center;border-bottom:1px solid var(--border);}
-.nav-bar button{background:none;border:none;padding:14px 20px;font-size:12px;color:var(--muted);cursor:pointer;letter-spacing:0.05em;font-family:'Inter',sans-serif;font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .18s,border-color .18s,background .18s;white-space:nowrap;text-transform:uppercase;}
+.nav-bar button{background:none;border:none;padding:14px 20px;font-size:12px;color:var(--muted);cursor:pointer;letter-spacing:0.05em;font-family:var(--f-body);font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .18s,border-color .18s,background .18s;white-space:nowrap;text-transform:uppercase;}
 .nav-bar button:hover{color:var(--navy);border-bottom-color:var(--rose);background:var(--rose-light);}
 .nav-bar button.active{color:var(--rose);border-bottom-color:var(--rose);}
-.search-results{display:none;background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 14px;margin:0 48px 4px;font-family:'Inter',sans-serif;font-size:13px;position:relative;z-index:10;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.search-results{display:none;background:#fff;border:1px solid var(--border);border-radius:10px;padding:8px 14px;margin:0 48px 4px;font-family:var(--f-body);font-size:13px;position:relative;z-index:10;box-shadow:0 4px 16px rgba(0,0,0,0.08);}
 .sr-item{padding:7px 0;border-bottom:1px solid var(--border);cursor:pointer;color:var(--navy);font-size:13px;}
 .sr-item:last-child{border-bottom:none;}
 .sr-item:hover{color:var(--rose);}
@@ -112,26 +112,26 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 /* PAGES */
 .page{display:none;padding:48px clamp(20px,4vw,56px);min-height:500px;background:var(--cream);flex:1;}
 .page.active{display:block;}
-.page-title{font-family:'Playfair Display',Georgia,serif;font-size:1.75em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:30px;padding-bottom:14px;border-bottom:1px solid var(--border);}
+.page-title{font-family:var(--f-title);font-size:1.75em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:30px;padding-bottom:14px;border-bottom:1px solid var(--border);}
 .section-divider{border:none;border-top:1px solid var(--border);margin:44px 0;}
-.bilan-section-title{font-family:'Inter',sans-serif;font-size:.78em;color:var(--navy);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.bilan-section-title{font-family:var(--f-body);font-size:.78em;color:var(--navy);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px;}
 .bilan-section-title::before{content:'';display:block;width:3px;height:1em;background:var(--rose);border-radius:2px;}
 
 /* ──── PAGE 1 : ACCUEIL ──── */
 .home-hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:34px;align-items:center;margin-bottom:32px;}
-.home-hero-text h2{font-family:'Playfair Display',Georgia,serif;font-size:1.42em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:13px;line-height:1.4;}
-.home-hero-text p{color:var(--muted);font-family:'Inter',sans-serif;font-size:.95em;line-height:1.85;text-align:justify;font-weight:300;}
-.convention-strip{display:inline-flex;align-items:center;gap:7px;background:#f0f6f1;border:1px solid #b8d8ba;border-radius:20px;padding:6px 16px;font-family:'Inter',sans-serif;font-size:12.5px;color:#2a4a30;margin-top:14px;font-weight:500;}
+.home-hero-text h2{font-family:var(--f-title);font-size:1.42em;color:var(--navy);font-weight:400;font-style:italic;margin-bottom:13px;line-height:1.4;}
+.home-hero-text p{color:var(--muted);font-family:var(--f-body);font-size:.95em;line-height:1.85;text-align:justify;font-weight:300;}
+.convention-strip{display:inline-flex;align-items:center;gap:7px;background:#f0f6f1;border:1px solid #b8d8ba;border-radius:20px;padding:6px 16px;font-family:var(--f-body);font-size:12.5px;color:#2a4a30;margin-top:14px;font-weight:500;}
 .convention-strip span{color:var(--sage);}
-.rdv-btn{display:inline-block;background:var(--rose);color:#fff;padding:11px 26px;border-radius:24px;text-decoration:none;font-family:'Inter',sans-serif;font-size:13px;letter-spacing:0.04em;margin-top:15px;font-weight:500;transition:background .2s,transform .15s;}
+.rdv-btn{display:inline-block;background:var(--rose);color:#fff;padding:11px 26px;border-radius:24px;text-decoration:none;font-family:var(--f-body);font-size:13px;letter-spacing:0.04em;margin-top:15px;font-weight:500;transition:background .2s,transform .15s;}
 .rdv-btn:hover{background:#a04060;transform:translateY(-1px);}
 .home-img{width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:4px;display:block;}
 .home-services{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;align-items:start;}
 .home-card{border-radius:14px;overflow:hidden;cursor:pointer;transition:box-shadow .25s,transform .2s;}
 .home-card:hover{box-shadow:0 8px 28px rgba(0,0,0,0.11);transform:translateY(-3px);}
 .home-card-header{padding:0 20px;text-align:center;transition:background .2s;height:88px;display:flex;flex-direction:column;justify-content:center;}
-.home-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1em;font-weight:500;letter-spacing:0.01em;margin-bottom:5px;}
-.home-card .card-hint{font-family:'Inter',sans-serif;font-size:11px;opacity:0.6;letter-spacing:0.02em;}
+.home-card h3{font-family:var(--f-title);font-size:1em;font-weight:500;letter-spacing:0.01em;margin-bottom:5px;}
+.home-card .card-hint{font-family:var(--f-body);font-size:11px;opacity:0.6;letter-spacing:0.02em;}
 /* Couleurs par carte */
 .home-card.gyneco .home-card-header{background:#f5ece8;border-bottom:2px solid #d9b5a5;}
 .home-card.gyneco h3{color:#6b3020;}
@@ -152,7 +152,7 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 
 .home-card-body{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .2s;}
 .home-card.open .home-card-body{max-height:300px;padding:14px 18px;}
-.home-card-body p{font-size:0.85em;color:var(--muted);font-family:sans-serif;line-height:1.7;}
+.home-card-body p{font-size:0.85em;color:var(--muted);font-family:var(--f-body);line-height:1.7;}
 
 /* ──── PAGE 2 : FORMATION ──── */
 .tl-category{
@@ -164,7 +164,7 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 .tl-category.dip-cat{background:#f4f8fc;border:1px solid #b8cfe0;}
 .tl-category.form-cat{background:#fdf8ee;border:1px solid #e0d0a0;}
 .tl-cat-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
-.tl-cat-badge{font-family:'Inter',sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;color:#fff;white-space:nowrap;}
+.tl-cat-badge{font-family:var(--f-body);font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 16px;border-radius:20px;color:#fff;white-space:nowrap;}
 .tl-cat-badge.exp{background:#8b6040;}
 .tl-cat-badge.dip{background:#3a5a82;}
 .tl-cat-badge.form{background:#8b7030;}
@@ -182,8 +182,8 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 .tl-node-dot{width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--sage-mid);transition:transform .2s,background .2s,border-color .2s;margin-bottom:10px;z-index:1;flex-shrink:0;}
 .tl-node:hover .tl-node-dot,.tl-node.open .tl-node-dot{background:var(--accent1);border-color:var(--accent1);transform:scale(1.3);}
 .tl-node-content{text-align:center;padding:0 4px;width:100%;}
-.tl-node-date{font-family:'Inter',sans-serif;font-size:10.5px;color:var(--rose);margin-bottom:3px;font-weight:600;letter-spacing:.03em;}
-.tl-node-title{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--navy);font-weight:500;line-height:1.35;}
+.tl-node-date{font-family:var(--f-body);font-size:10.5px;color:var(--rose);margin-bottom:3px;font-weight:600;letter-spacing:.03em;}
+.tl-node-title{font-family:var(--f-body);font-size:12.5px;color:var(--navy);font-weight:500;line-height:1.35;}
 .tl-node:hover .tl-node-title{color:var(--accent1);}
 /* Tooltip inline — s'affiche sous le titre, dans le flux, pas en position absolute */
 /* Tooltip inline, centré sous le point, contenu dans la catégorie */
@@ -197,7 +197,7 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
   background:#fff;
   border-radius:8px;
   padding:9px 14px;
-  font-family:sans-serif;
+  font-family:var(--f-body);
   font-size:12.5px;
   color:var(--muted);
   box-shadow:0 4px 16px rgba(0,0,0,0.12);
@@ -233,7 +233,7 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 }
 .tl-node:hover .tl-node-tip,.tl-node.open .tl-node-tip{display:block;}
 
-.ordre-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:9px 18px;font-family:'Inter',sans-serif;font-size:12.5px;color:var(--navy);text-decoration:none;font-weight:500;transition:border-color .18s,color .18s;}
+.ordre-link{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:#fff;border:1px solid var(--border);border-radius:24px;padding:9px 18px;font-family:var(--f-body);font-size:12.5px;color:var(--navy);text-decoration:none;font-weight:500;transition:border-color .18s,color .18s;}
 .ordre-link:hover{border-color:var(--sage);color:var(--sage);}
 .ordre-link svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
 
@@ -241,38 +241,38 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 .cabinet-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:22px;margin-bottom:22px;align-items:start;}
 .cab-left{display:flex;flex-direction:column;gap:14px;}
 .info-block{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 22px;box-shadow:0 1px 6px rgba(0,0,0,0.04);}
-.block-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;color:var(--rose);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.block-label{font-family:var(--f-body);font-size:10px;font-weight:700;color:var(--rose);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border);}
 .t-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:11px;}
 .t-item:last-child{margin-bottom:0;}
 .t-ico{width:20px;flex-shrink:0;display:flex;padding-top:2px;}
 .t-ico svg{width:15px;height:15px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
-.t-text strong{color:var(--text);display:block;font-family:sans-serif;font-size:13px;}
-.t-text span{color:var(--muted);font-size:12px;line-height:1.5;font-family:sans-serif;}
+.t-text strong{color:var(--text);display:block;font-family:var(--f-body);font-size:13px;}
+.t-text span{color:var(--muted);font-size:12px;line-height:1.5;font-family:var(--f-body);}
 .map-frame{border:1px solid var(--border);border-radius:14px;overflow:hidden;height:100%;min-height:340px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
 #mapsIframe{width:100%;height:100%;border:none;min-height:340px;display:block;}
 .photos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .photo-item{display:flex;flex-direction:column;gap:5px;}
 .cabinet-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--border);}
-.photo-caption{font-family:sans-serif;font-size:11.5px;color:var(--muted);text-align:center;font-style:italic;}
+.photo-caption{font-family:var(--f-body);font-size:11.5px;color:var(--muted);text-align:center;font-style:italic;}
 
 /* ──── PAGE 4 : GYNECO ──── */
-.gyneco-intro{font-family:'Playfair Display',Georgia,serif;font-size:1.05em;color:var(--muted);font-style:italic;text-align:justify;line-height:1.75;margin-bottom:26px;padding:18px 22px;background:#fff;border-radius:12px;border-left:3px solid var(--rose);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.gyneco-intro{font-family:var(--f-title);font-size:1.05em;color:var(--muted);font-style:italic;text-align:justify;line-height:1.75;margin-bottom:26px;padding:18px 22px;background:#fff;border-radius:12px;border-left:3px solid var(--rose);border-top:1px solid var(--border);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
 .gyneco-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-.gyn-col-title{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:12px;padding:6px 14px;border-radius:20px;color:#fff;display:inline-block;}
+.gyn-col-title{font-family:var(--f-body);font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:12px;padding:6px 14px;border-radius:20px;color:#fff;display:inline-block;}
 .gyn-col-title.consult{background:#4a8c62;}
 .gyn-col-title.depistage{background:#c8a030;}
-.gyneco-card{border-radius:10px;padding:12px 16px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:8px;line-height:1.5;border:1px solid transparent;font-weight:400;}
+.gyneco-card{border-radius:10px;padding:12px 16px;font-family:var(--f-body);font-size:13px;color:var(--text);display:flex;align-items:center;gap:10px;margin-bottom:8px;line-height:1.5;border:1px solid transparent;font-weight:400;}
 .gyneco-card.c{background:#e8f4ec;border-color:#88bb9a;}
 .gyneco-card.c::before{content:'';width:5px;height:5px;border-radius:50%;background:#4a8c62;flex-shrink:0;}
 .gyneco-card.d{background:#fdf7e8;border-color:#e0c870;}
 .gyneco-card.d::before{content:'';width:5px;height:5px;border-radius:50%;background:#c8a030;flex-shrink:0;}
 .gyneco-links{margin-top:24px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 20px;}
-.gyneco-links h3{font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.12em;color:var(--rose);margin-bottom:10px;text-transform:uppercase;font-weight:700;}
-.gyneco-links a{display:block;color:var(--navy);font-family:'Inter',sans-serif;font-size:13px;margin-bottom:6px;text-decoration:none;padding-left:12px;border-left:2px solid var(--rose-light);transition:color .15s,border-color .15s;}
+.gyneco-links h3{font-family:var(--f-body);font-size:10px;letter-spacing:.12em;color:var(--rose);margin-bottom:10px;text-transform:uppercase;font-weight:700;}
+.gyneco-links a{display:block;color:var(--navy);font-family:var(--f-body);font-size:13px;margin-bottom:6px;text-decoration:none;padding-left:12px;border-left:2px solid var(--rose-light);transition:color .15s,border-color .15s;}
 .gyneco-links a:hover{color:var(--rose);border-left-color:var(--rose);}
 
 /* ──── PAGE 5 : GROSSESSE & POST-NATAL ──── */
-.section-label{display:inline-block;font-family:'Inter',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:16px;color:#fff;}
+.section-label{display:inline-block;font-family:var(--f-body);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:16px;color:#fff;}
 .section-label.pre{background:#2c5f8a;}
 .section-label.post{background:#3d7a6e;}
 .grossesse-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px;}
@@ -286,10 +286,10 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 .gc-face.c4{background:#eef2f8;border-color:#a0b8d8;border-left:4px solid #4a72a8;}
 .gc-face.c5{background:#e8f0f8;border-color:#90aacc;border-left:4px solid #4272a8;}
 .gc-face.c6{background:#f3eef8;border-color:#c0a8e0;border-left:4px solid #7a5aa0;}
-.gc-face h3{font-family:'Inter',sans-serif;font-size:.78em;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;color:var(--navy);font-weight:600;}
-.gc-face .hint{font-family:'Inter',sans-serif;font-size:11px;color:var(--muted);font-style:italic;opacity:.7;}
-.gc-tarif{display:inline-block;font-family:sans-serif;font-size:13px;font-weight:700;color:#8a2040;margin-top:6px;letter-spacing:.01em;}
-.gc-detail{display:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:6px;font-family:'Inter',sans-serif;font-size:13px;color:var(--text);line-height:1.75;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
+.gc-face h3{font-family:var(--f-body);font-size:.78em;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;color:var(--navy);font-weight:600;}
+.gc-face .hint{font-family:var(--f-body);font-size:11px;color:var(--muted);font-style:italic;opacity:.7;}
+.gc-tarif{display:inline-block;font-family:var(--f-body);font-size:13px;font-weight:700;color:#8a2040;margin-top:6px;letter-spacing:.01em;}
+.gc-detail{display:none;background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:6px;font-family:var(--f-body);font-size:13px;color:var(--text);line-height:1.75;box-shadow:0 2px 10px rgba(0,0,0,0.05);}
 .gc-detail.open{display:block;}
 .gc-detail ul{list-style:none;padding:0;}
 .gc-detail ul li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:flex-start;}
@@ -298,39 +298,39 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 /* Post-natal steps */
 .pn-steps{display:flex;flex-direction:column;gap:12px;}
 .pn-step{display:flex;gap:16px;align-items:flex-start;border-radius:14px;padding:16px 20px;}
-.pn-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:15px;flex-shrink:0;color:#fff;font-weight:400;font-style:italic;}
+.pn-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--f-title);font-size:15px;flex-shrink:0;color:#fff;font-weight:400;font-style:italic;}
 .pn-step.s1{background:#fdf0ea;border-left:4px solid #c8845a;} .pn-step.s1 .pn-num{background:#c8845a;}
 .pn-step.s2{background:#f5eaf0;border-left:4px solid #b0608a;} .pn-step.s2 .pn-num{background:#b0608a;}
 .pn-step.s3{background:#eef2f8;border-left:4px solid #4a72a8;} .pn-step.s3 .pn-num{background:#4a72a8;}
 .pn-step.s4{background:#e8f0f8;border-left:4px solid #4272a8;} .pn-step.s4 .pn-num{background:#4272a8;}
 .pn-step.s5{background:#f3eef8;border-left:4px solid #7a5aa0;} .pn-step.s5 .pn-num{background:#7a5aa0;}
-.pn-step h3{font-family:'Playfair Display',Georgia,serif;color:var(--navy);margin-bottom:3px;font-size:.95em;font-weight:500;}
-.pn-step p{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);text-align:justify;font-weight:300;}
+.pn-step h3{font-family:var(--f-title);color:var(--navy);margin-bottom:3px;font-size:.95em;font-weight:500;}
+.pn-step p{font-family:var(--f-body);font-size:13px;color:var(--muted);text-align:justify;font-weight:300;}
 
 /* ──── PAGE 6 : BILANS & VACCINATIONS ──── */
 .bilans-strips{display:flex;flex-direction:column;gap:14px;margin-bottom:28px;}
 .bilan-strip{display:flex;align-items:stretch;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
 .bilan-strip-age{background:var(--navy);color:#fff;padding:16px 22px;width:190px;text-align:center;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;white-space:nowrap;}
-.bilan-strip-age strong{display:block;font-family:'Playfair Display',Georgia,serif;font-size:1.35em;font-weight:400;letter-spacing:.02em;}
-.bilan-strip-age span{display:block;font-family:sans-serif;font-size:11px;color:var(--sage-mid);margin-top:3px;letter-spacing:.04em;}
+.bilan-strip-age strong{display:block;font-family:var(--f-title);font-size:1.35em;font-weight:400;letter-spacing:.02em;}
+.bilan-strip-age span{display:block;font-family:var(--f-body);font-size:11px;color:var(--sage-mid);margin-top:3px;letter-spacing:.04em;}
 .bilan-strip-body{flex:1;padding:16px 20px;background:#fff;display:flex;align-items:center;gap:14px;flex-wrap:nowrap;}
-.bilan-strip-desc{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);flex:1;min-width:0;font-weight:300;}
+.bilan-strip-desc{font-family:var(--f-body);font-size:13px;color:var(--muted);flex:1;min-width:0;font-weight:300;}
 .bilan-strip-desc strong{color:var(--text);display:block;margin-bottom:3px;}
 .bilan-strip-links{display:flex;flex-direction:column;gap:6px;flex-shrink:0;}
-.bilan-strip-links a{display:block;text-align:center;padding:6px 13px;border-radius:3px;font-family:sans-serif;font-size:12px;text-decoration:none;white-space:nowrap;}
-.lgbtiq-badge{display:inline-flex;align-items:center;background:linear-gradient(90deg,#e8a0bf,#a8c4f0,#a0e8d0);color:#1a2e4a;padding:7px 18px;border-radius:24px;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;margin:14px 0 18px;letter-spacing:.02em;}
-.quest-block{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:12px;font-family:'Inter',sans-serif;font-size:13px;}
+.bilan-strip-links a{display:block;text-align:center;padding:6px 13px;border-radius:3px;font-family:var(--f-body);font-size:12px;text-decoration:none;white-space:nowrap;}
+.lgbtiq-badge{display:inline-flex;align-items:center;background:linear-gradient(90deg,#e8a0bf,#a8c4f0,#a0e8d0);color:#1a2e4a;padding:7px 18px;border-radius:24px;font-family:var(--f-body);font-size:12.5px;font-weight:500;margin:14px 0 18px;letter-spacing:.02em;}
+.quest-block{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-top:12px;font-family:var(--f-body);font-size:13px;}
 .quest-block p{color:var(--muted);margin-bottom:9px;font-style:italic;font-size:12.5px;}
 .quest-block a{display:inline-block;background:var(--accent1);color:#fff;padding:6px 14px;border-radius:3px;font-size:12px;text-decoration:none;margin-right:7px;margin-bottom:4px;}
-.quest-block a.ameli{background:var(--sage);}
+.quest-block a.ameli{background:var(--green);}
 .quest-block a:hover{opacity:.85;}
 .vacc-section{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 28px;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
-.vacc-table{width:100%;border-collapse:collapse;font-family:'Inter',sans-serif;font-size:13px;}
+.vacc-table{width:100%;border-collapse:collapse;font-family:var(--f-body);font-size:13px;}
 .vacc-table th{background:var(--navy);color:#fff;padding:10px 14px;text-align:left;font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;}
 .vacc-table td{padding:9px 13px;border-bottom:1px solid var(--border);vertical-align:top;color:var(--text);}
 .vacc-table tr:nth-child(even) td{background:#e8f5eb;}
 .vacc-table td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
-.vacc-note{font-family:sans-serif;font-size:11.5px;color:var(--muted);margin-top:12px;font-style:italic;}
+.vacc-note{font-family:var(--f-body);font-size:11.5px;color:var(--muted);margin-top:12px;font-style:italic;}
 
 
 /* =============================================
@@ -422,11 +422,11 @@ body{font-family:'Inter',sans-serif;background:#e8e4df;color:var(--text);font-si
 .modal-overlay.open{display:flex;}
 .modal-box{background:var(--cream);border-radius:16px;max-width:720px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 12px 60px rgba(0,0,0,0.22);position:relative;}
 .modal-header{background:var(--navy);color:#fff;padding:18px 26px;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center;}
-.modal-header h2{font-size:1.05em;font-weight:600;font-family:sans-serif;letter-spacing:.04em;}
+.modal-header h2{font-size:1.05em;font-weight:600;font-family:var(--f-body);letter-spacing:.04em;}
 .modal-close{background:none;border:none;color:rgba(255,255,255,0.7);font-size:22px;cursor:pointer;line-height:1;padding:0 4px;}
 .modal-close:hover{color:#fff;}
-.modal-body{padding:28px 32px;font-family:'Inter',sans-serif;font-size:13.5px;color:var(--text);line-height:1.85;font-weight:300;}
-.modal-body h3{font-family:'Inter',sans-serif;color:var(--navy);font-size:.88em;font-weight:700;margin:22px 0 6px;letter-spacing:.06em;text-transform:uppercase;}
+.modal-body{padding:28px 32px;font-family:var(--f-body);font-size:13.5px;color:var(--text);line-height:1.85;font-weight:300;}
+.modal-body h3{font-family:var(--f-body);color:var(--navy);font-size:.88em;font-weight:700;margin:22px 0 6px;letter-spacing:.06em;text-transform:uppercase;}
 .modal-body h3:first-child{margin-top:0;}
 .modal-body p{color:var(--muted);margin-bottom:10px;}
 .modal-body a{color:#c0607a;text-decoration:none;}
@@ -547,7 +547,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 }
 
 /* FOOTER */
-.footer{background:#1a2330;color:rgba(255,255,255,0.62);padding:28px 56px 16px;font-family:'Inter',sans-serif;font-size:12px;flex-shrink:0;}
+.footer{background:#1a2330;color:rgba(255,255,255,0.62);padding:28px 56px 16px;font-family:var(--f-body);font-size:12px;flex-shrink:0;}
 .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);}
 .footer-col h4{color:rgba(255,255,255,0.35);font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px;font-weight:600;}
 .footer-col p,.footer-col a{display:block;color:rgba(255,255,255,0.55);text-decoration:none;margin-bottom:4px;line-height:1.7;font-size:12.5px;font-weight:300;}
@@ -578,9 +578,9 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 .footer-links a{color:rgba(255,255,255,0.3);text-decoration:none;margin:0 10px;font-size:11px;letter-spacing:.02em;white-space:nowrap;}
 .footer-links a:hover{color:#fff;}
 
-.pn-zone{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--rose);font-weight:500;letter-spacing:0.04em;margin-bottom:4px;margin-top:2px;}
+.pn-zone{font-family:var(--f-body);font-size:11.5px;color:var(--rose);font-weight:500;letter-spacing:0.04em;margin-bottom:4px;margin-top:2px;}
 /* ── BANDEAU COOKIES ── */
-.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);color:rgba(255,255,255,0.82);font-family:sans-serif;font-size:12.5px;padding:13px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;box-shadow:0 -3px 16px rgba(0,0,0,0.22);transition:transform .3s ease;}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--navy);color:rgba(255,255,255,0.82);font-family:var(--f-body);font-size:12.5px;padding:13px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;box-shadow:0 -3px 16px rgba(0,0,0,0.22);transition:transform .3s ease;}
 .cookie-banner.hidden{transform:translateY(110%);}
 .cookie-banner p{margin:0;line-height:1.6;}
 .cookie-banner p a{color:var(--sage-mid);text-decoration:underline;cursor:pointer;}
@@ -596,7 +596,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 }
 .accueil-citation::before{
   content:'\201C';
-  font-family:'Playfair Display',Georgia,serif;
+  font-family:var(--f-title);
   font-size:4em;
   color:var(--rose);
   opacity:0.3;
@@ -605,7 +605,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   line-height:1;
 }
 .accueil-citation p{
-  font-family:'Playfair Display',Georgia,serif;
+  font-family:var(--f-title);
   font-size:1.08em;
   font-style:italic;
   color:var(--navy);
@@ -614,7 +614,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 }
 .accueil-citation cite{
   display:block;
-  font-family:'Inter',sans-serif;
+  font-family:var(--f-body);
   font-size:0.78em;
   color:var(--rose);
   font-style:normal;
@@ -624,19 +624,19 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 }
 
 .cookie-btns{display:flex;gap:10px;flex-shrink:0;}
-.cookie-btn{background:#c0607a;color:#fff;border:none;border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:sans-serif;cursor:pointer;white-space:nowrap;}
+.cookie-btn{background:#c0607a;color:#fff;border:none;border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:var(--f-body);cursor:pointer;white-space:nowrap;}
 .cookie-btn:hover{background:#a04060;}
-.cookie-btn-refuse{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:sans-serif;cursor:pointer;white-space:nowrap;}
+.cookie-btn-refuse{background:transparent;color:rgba(255,255,255,0.65);border:1px solid rgba(255,255,255,0.3);border-radius:4px;padding:7px 20px;font-size:12.5px;font-family:var(--f-body);cursor:pointer;white-space:nowrap;}
 .cookie-btn-refuse:hover{color:#fff;border-color:rgba(255,255,255,0.6);}
 
 /* ── MAP PLACEHOLDER ── */
 #mapContainer{position:relative;width:100%;height:100%;}
 .map-placeholder{display:flex;align-items:center;justify-content:center;background:var(--cream);border:1px dashed var(--border);border-radius:8px;min-height:280px;padding:24px;}
 .map-ph-inner{text-align:center;max-width:320px;}
-.map-ph-inner p{font-family:'Inter',sans-serif;font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5;}
-.map-ph-btn{background:var(--rose);color:#fff;border:none;padding:9px 18px;border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer;letter-spacing:0.04em;transition:opacity .18s;}
+.map-ph-inner p{font-family:var(--f-body);font-size:13px;color:var(--muted);margin-bottom:16px;line-height:1.5;}
+.map-ph-btn{background:var(--rose);color:#fff;border:none;padding:9px 18px;border-radius:6px;font-family:var(--f-body);font-size:12px;font-weight:500;cursor:pointer;letter-spacing:0.04em;transition:opacity .18s;}
 .map-ph-btn:hover{opacity:.85;}
-.map-ph-link{display:inline-block;padding:9px 18px;border:1px solid var(--muted);border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;color:var(--muted);text-decoration:none;transition:color .18s,border-color .18s;}
+.map-ph-link{display:inline-block;padding:9px 18px;border:1px solid var(--muted);border-radius:6px;font-family:var(--f-body);font-size:12px;color:var(--muted);text-decoration:none;transition:color .18s,border-color .18s;}
 .map-ph-link:hover{color:var(--navy);border-color:var(--navy);}
 
 /* ── TEXTE JUSTIFIÉ mentions + confidentialité ── */
@@ -666,7 +666,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 
 /* séparateur de section accueil */
 .home-section-label{
-  font-family:'Inter',sans-serif;
+  font-family:var(--f-body);
   font-size:10px;
   font-weight:700;
   letter-spacing:.14em;
@@ -683,40 +683,372 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   height:1px;
   background:var(--border);
 }
+
+/* =============================================
+   NOUVELLE STRUCTURE — commun aux variantes
+   ============================================= */
+html{scroll-behavior:smooth;}
+body{background:var(--bg-out);}
+.wrap{background:var(--bg);box-shadow:none;}
+.page{background:transparent;}
+.page.active{animation:pageIn .6s cubic-bezier(.22,.61,.36,1);}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.scroll-reveal{transition-duration:.8s;transition-timing-function:cubic-bezier(.22,.61,.36,1);}
+
+/* Bandeau infos */
+.topline{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:7px clamp(20px,4vw,56px);font-family:var(--f-body);font-size:13px;}
+.topline-info{display:flex;gap:22px;align-items:center;}
+.topline a{text-decoration:none;color:inherit;}
+.topline .top-search{max-width:240px;margin:0;}
+.topline .top-search input{border-radius:20px;padding:5px 14px;font-size:12.5px;font-family:var(--f-body);width:100%;outline:none;}
+.search-results{margin:0 clamp(20px,4vw,56px) 4px;}
+.topline .top-search input::placeholder{color:var(--muted);opacity:.8;}
+.cookie-btn{background:var(--accent);}
+.cookie-btn:hover{background:var(--navy);}
+.brand-name{white-space:nowrap;}
+
+/* Nom + RDV */
+.brand-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px clamp(20px,4vw,56px);}
+.brand{display:flex;flex-direction:column;text-decoration:none;}
+.brand-name{font-family:var(--f-brand);line-height:1.05;}
+.brand-sub{font-family:var(--f-body);}
+.header-rdv{font-family:var(--f-body);text-decoration:none;white-space:nowrap;transition:background .25s,color .25s,transform .25s;}
+.header-rdv:hover{transform:translateY(-1px);}
+.burger{display:none;}
+.rdv-short{display:none;}
+.menu-veil{display:none;}
+
+/* Navigation */
+.sticky-nav{top:0;box-shadow:none;}
+.nav-bar{overflow-x:auto;scrollbar-width:none;}
+.nav-bar::-webkit-scrollbar{display:none;}
+.nav-bar button{text-transform:none;letter-spacing:.01em;font-size:14.5px;font-family:var(--f-body);padding:15px 18px;}
+.nav-bar button:hover{background:transparent;}
+
+/* Accueil : bandeau */
+.home-banner{position:relative;margin-bottom:12px;}
+.home-banner-media{overflow:hidden;}
+.home-banner-media img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;}
+.home-banner-text h2{font-family:var(--f-title);font-style:normal;line-height:1.3;margin-bottom:14px;}
+.home-banner-text p{font-family:var(--f-body);line-height:1.85;}
+.home-banner .eyebrow{font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px;}
+.home-banner .convention-strip{margin-top:16px;margin-right:12px;}
+.rdv-btn{transition:background .25s,transform .25s,box-shadow .25s;}
+
+/* Accueil : cases */
+.home-section-label{font-family:var(--f-title);text-transform:none;letter-spacing:0;font-weight:400;}
+.home-services{gap:22px;}
+.home-card{background:#fff;}
+.home-card:hover{transform:translateY(-4px);}
+.home-card-media{height:200px;background-size:contain;background-position:center;background-repeat:no-repeat;transition:transform .9s cubic-bezier(.22,.61,.36,1);}
+.home-card:hover .home-card-media{transform:scale(1.04);}
+.home-card-header{height:auto;padding:18px 22px;border-bottom:none !important;background:#fff !important;text-align:left;}
+.home-card h3{font-family:var(--f-title);font-size:1.15em;color:var(--ink) !important;}
+.home-card .card-hint{opacity:1;font-size:13px;color:var(--accent) !important;}
+.home-card .card-hint::after{content:' +';}
+.home-card.open .card-hint::after{content:' −';}
+.home-card-body{background:#fff !important;}
+.home-card.open .home-card-body{padding:0 22px 20px;}
+.home-card-body p{font-family:var(--f-body);font-size:.92em;}
+/* Visuels des cases : remplacer par des photos (docs/cartes/xxx.jpg) quand elles seront prêtes */
+.home-card.gyneco .home-card-media{background-image:url(docs/cartes/gyneco.svg);background-color:var(--c-gyneco);}
+.home-card.grossesse .home-card-media{background-image:url(docs/cartes/grossesse.svg);background-color:var(--c-grossesse);}
+.home-card.bilans .home-card-media{background-image:url(docs/cartes/bilans.svg);background-color:var(--c-bilans);}
+.home-card.hommes .home-card-media{background-image:url(docs/cartes/hommes.svg);background-color:var(--c-hommes);}
+
+/* Titres de pages */
+.page-title{font-style:normal;}
+
+/* ---- Mobile ---- */
+@media (max-width: 860px){
+  .topline{padding:8px 16px;}
+  .topline-info{display:none;}
+  .topline .top-search{max-width:none;flex:1;}
+  .brand-row{position:sticky;top:0;z-index:105;padding:10px 14px;gap:10px;}
+  .brand{flex:1;min-width:0;}
+  .brand-sub{display:none;}
+  .rdv-long{display:none;}
+  .rdv-short{display:inline;}
+  .header-rdv{font-size:12.5px !important;padding:8px 13px !important;}
+  .burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:8px;flex-shrink:0;}
+  .burger span{display:block;height:2px;border-radius:2px;background:var(--ink);transition:transform .35s cubic-bezier(.22,.61,.36,1),opacity .2s;}
+  body.menu-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  body.menu-open .burger span:nth-child(2){opacity:0;}
+  body.menu-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .sticky-nav{position:fixed;top:60px;left:0;right:0;z-index:104;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .4s cubic-bezier(.22,.61,.36,1),opacity .3s,visibility 0s .4s;box-shadow:0 18px 30px rgba(0,0,0,.12);}
+  body.menu-open .sticky-nav{transform:none;opacity:1;visibility:visible;transition:transform .4s cubic-bezier(.22,.61,.36,1),opacity .3s;}
+  .nav-bar{flex-direction:column;overflow:visible;padding:6px 0 10px !important;touch-action:auto;}
+  .nav-bar button{text-align:left;padding:13px 22px !important;font-size:16px !important;border-bottom:none;border-left:3px solid transparent;margin:0;white-space:normal;}
+  .nav-bar button.active{border-left-color:var(--accent);}
+  .menu-veil{display:block;position:fixed;inset:0;z-index:103;background:rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s;}
+  body.menu-open .menu-veil{opacity:1;visibility:visible;transition:opacity .3s;}
+  .home-card-media{height:150px;}
+  .home-services{gap:16px;}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important;}
+  .scroll-reveal{opacity:1;transform:none;}
+}
+
+/* =============================================
+   VARIANTE C — « Cabinet » : turquoise et bois clair, les couleurs réelles du cabinet
+   Grandes cases illustrées avec le titre posé dessus
+   ============================================= */
+:root{
+  --f-title:'Libre Baskerville',Georgia,serif;--f-body:'Work Sans',system-ui,sans-serif;--f-brand:'Libre Baskerville',Georgia,serif;
+  --bg:#ffffff;--bg-out:#ffffff;--ink:#16323d;--accent:#1d87ad;
+  --navy:#16465a;--rose:#1d87ad;--rose-light:#e4f3f8;--sage:#c08a55;--sage-mid:#e2c4a2;--cream:#ffffff;--border:#e3e8ea;--muted:#55666d;--text:#1f2d33;--accent1:#1d87ad;
+  --c-gyneco:#f1dfcf;--c-grossesse:#f4dde3;--c-bilans:#d6ecf3;--c-hommes:#dcebe2;
+}
+.topline{background:#fff;color:var(--muted);border-bottom:1px solid var(--border);}
+.topline .top-search input{background:#f4f7f8;border:1px solid var(--border);color:var(--text);}
+.brand-row{padding:24px clamp(20px,4vw,56px);}
+.brand{flex-direction:row;align-items:center;gap:16px;}
+.brand::before{content:'IG';display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--f-title);font-size:20px;letter-spacing:.04em;flex-shrink:0;}
+.brand-name{font-size:1.85em;color:var(--navy);}
+.brand-sub{display:block;font-size:14px;color:var(--sage);margin-top:5px;font-weight:500;}
+.brand > span{display:block;}
+.brand{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:16px;}
+.brand::before{grid-row:1 / span 2;}
+.header-rdv{background:var(--navy);color:#fff;padding:12px 24px;border-radius:6px;font-size:14px;font-weight:500;}
+.header-rdv:hover{background:var(--accent);}
+.sticky-nav{background:var(--navy);}
+.nav-bar{background:var(--navy);border-bottom:none;}
+.nav-bar button{color:rgba(255,255,255,.75);font-weight:500;border-bottom-width:3px;}
+.nav-bar button:hover{color:#fff;border-bottom-color:rgba(255,255,255,.35);}
+.nav-bar button.active{color:#fff;border-bottom-color:var(--sage-mid);}
+
+.page-title{font-family:var(--f-title);color:var(--navy);border-bottom:none;padding-left:18px;border-left:4px solid var(--sage);padding-bottom:2px;}
+
+/* Photo à gauche, texte sur fond bois clair à droite */
+#page-accueil{padding-top:36px;}
+.home-banner{display:grid;grid-template-columns:1.15fr .85fr;align-items:stretch;border-radius:10px;overflow:hidden;background:#f6efe7;}
+.home-banner-media{min-height:440px;}
+.home-banner-text{padding:44px 44px 40px;align-self:center;}
+.home-banner-text h2{font-size:1.5em;color:var(--navy);}
+.home-banner-text p{color:var(--muted);}
+.home-banner .eyebrow{color:var(--sage);font-weight:600;}
+.convention-strip{background:#fff;border-color:#e2d3c2;color:#5c4330;}
+.convention-strip span{color:var(--accent);}
+.rdv-btn{background:var(--accent);border-radius:6px;padding:13px 26px;font-size:14px;}
+.rdv-btn:hover{background:var(--navy);}
+.home-section-label{font-size:1.5em;color:var(--navy);margin:52px 0 22px;}
+.home-section-label::before{display:none;}
+.home-section-label::after{background:var(--border);}
+
+/* Cases : visuel plein cadre, titre en bas sur un dégradé */
+.home-card{position:relative;border-radius:10px;background:var(--navy);}
+.home-card-media{height:250px;background-position:right 8% center;}
+.home-card-header{position:absolute;left:0;right:0;top:250px;transform:translateY(-100%);background:linear-gradient(to top,rgba(14,40,52,.82),rgba(14,40,52,0)) !important;padding:50px 22px 18px;}
+.home-card h3{color:#fff !important;font-size:1.2em;}
+.home-card .card-hint{color:#f0d9bf !important;}
+.home-card-body{background:#fff !important;}
+.home-card.open .home-card-body{padding:16px 22px 18px;}
+.footer{background:#12394a;}
+
+@media (max-width: 860px){
+  .brand-row{background:#fff;box-shadow:0 1px 0 var(--border);}
+  .brand::before{width:38px;height:38px;font-size:14px;grid-row:auto;}
+  .brand{column-gap:10px;grid-template-rows:auto;align-items:center;}
+  .brand > .brand-sub{display:none;}
+  .brand-name{font-size:1.15em;}
+  .sticky-nav{top:60px;}
+  #page-accueil{padding-top:16px;}
+  .home-banner{grid-template-columns:1fr;}
+  .home-banner-media{min-height:0;height:240px;}
+  .home-banner-text{padding:24px 20px 26px;}
+  .home-banner-text h2{font-size:1.25em;}
+  .home-card-media{height:180px;}
+  .home-card-header{top:180px;}
+  .home-section-label{font-size:1.3em;margin:36px 0 18px;}
+}
+
+/* =============================================
+   BANDE DU HAUT FIXE + IMAGES DES CASES (v2)
+   ============================================= */
+:root{--tl-h:44px;}
+body.is-scrolled{--tl-h:34px;}
+.ic{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+.topline{position:sticky;top:0;z-index:110;height:var(--tl-h);padding:0 clamp(20px,4vw,56px);display:grid;grid-template-columns:1fr minmax(200px,320px) 1fr;align-items:center;gap:24px;background:#fff;color:var(--muted);border-bottom:1px solid var(--border);transition:height .35s cubic-bezier(.22,.61,.36,1),margin .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s;}
+body.is-scrolled .topline{margin-bottom:10px;box-shadow:0 3px 14px rgba(14,40,52,.09);}
+.top-rdv{justify-self:start;display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:13.5px;font-weight:600;text-decoration:none;white-space:nowrap;}
+.top-rdv em{font-style:normal;font-weight:400;color:var(--muted);}
+.top-rdv em::before{content:'·';margin-right:8px;}
+.top-rdv:hover span{text-decoration:underline;}
+.top-search{position:relative;display:block;max-width:none;margin:0;flex:none;}
+.top-search>.ic{position:absolute;left:11px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--muted);pointer-events:none;}
+.topline .top-search input{width:100%;height:30px;padding:0 14px 0 32px;border-radius:20px;background:#f4f7f8;border:1px solid var(--border);color:var(--text);font-size:13px;transition:height .35s,border-color .2s,background .2s;}
+body.is-scrolled .topline .top-search input{height:25px;}
+.topline .top-search input:focus{outline:none;border-color:var(--accent);background:#fff;}
+.top-search .search-results{position:absolute;top:calc(100% + 8px);left:0;right:0;margin:0;max-height:60vh;overflow:auto;z-index:120;}
+.topline-info{justify-self:end;display:flex;align-items:center;gap:18px;font-size:13px;white-space:nowrap;}
+.topline-info .addr{display:inline-flex;align-items:center;gap:7px;}
+.topline-info a{color:var(--navy);font-weight:500;text-decoration:none;}
+.topline-info a:hover{color:var(--accent);}
+.sticky-nav{top:var(--tl-h);transition:top .35s cubic-bezier(.22,.61,.36,1);}
+.m-search,.menu-info{display:none;}
+.brand-row .header-rdv .rdv-short{display:none;}
+.nav-bar button{white-space:nowrap;}
+.brand{align-content:center;row-gap:3px;}
+.brand-sub{margin-top:0;}
+
+/* Images des cases d'accueil (docs/card_*.jpg) */
+.home-card-media{background-size:cover;background-position:center;}
+.home-card.gyneco .home-card-media{background-image:url(docs/card_gyneco.jpg);}
+.home-card.grossesse .home-card-media{background-image:url(docs/card_grossesse.jpg);}
+.home-card.bilans .home-card-media{background-image:url(docs/card_bilans.jpg);}
+.home-card.hommes .home-card-media{background-image:url(docs/card_hommes.jpg);}
+.home-banner-media img{object-position:center 40%;}
+
+@media (max-width: 1100px){
+  .topline{grid-template-columns:auto minmax(160px,1fr) auto;gap:16px;}
+  .topline-info .tel{display:none;}
+}
+@media (max-width: 860px){
+  :root{--brand-h:60px;}
+  .topline{display:none;}
+  body.search-open .topline{display:block;position:fixed;top:var(--brand-h);left:0;right:0;height:auto;margin:0;padding:8px 14px;box-shadow:0 10px 24px rgba(14,40,52,.14);z-index:106;}
+  body.search-open .topline .top-search input{height:38px;font-size:16px;}
+  body.search-open .top-rdv,body.search-open .topline-info{display:none;}
+  body.is-scrolled .topline{margin-bottom:0;}
+  .brand-row{position:sticky;top:0;z-index:107;}
+  .brand-row .brand{display:flex;align-items:center;}
+  .brand::before{display:none;}
+  .brand-row .brand-name{font-size:1.1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .brand-row{gap:4px !important;padding:10px 10px !important;}
+  .brand-row .brand{flex:1;min-width:0;}
+  .m-search{display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:none;border:none;color:var(--ink);cursor:pointer;flex-shrink:0;}
+  .m-search .ic{width:21px;height:21px;}
+  body.search-open .m-search{color:var(--accent);}
+  .brand-row .header-rdv .rdv-long{display:none;}
+  .brand-row .header-rdv .rdv-short{display:inline;}
+  .sticky-nav{top:var(--brand-h);transition:transform .4s cubic-bezier(.22,.61,.36,1),opacity .3s,visibility 0s .4s;}
+  body.menu-open .sticky-nav{transition:transform .4s cubic-bezier(.22,.61,.36,1),opacity .3s;}
+  .menu-info{display:flex;flex-direction:column;gap:8px;padding:14px 22px 18px;border-top:1px solid rgba(255,255,255,.16);color:rgba(255,255,255,.82);font-size:14px;}
+  .menu-info span{display:inline-flex;align-items:center;gap:8px;}
+  .menu-info a{color:#fff;font-weight:500;text-decoration:none;padding-left:23px;}
+}
+
+/* =============================================
+   HAUT DE PAGE v3 — commun
+   ============================================= */
+@media (min-width: 861px){
+  .brand-row .header-rdv{display:none;}
+  .brand-row{justify-content:center;padding:20px clamp(20px,4vw,56px) 12px;}
+  .brand{margin:0 auto;}
+  .nav-bar{justify-content:flex-start;gap:6px;overflow-x:auto;}
+  .nav-bar button:first-child{margin-left:auto;}
+  .nav-bar button:last-child{margin-right:auto;}
+  .nav-bar button{border-bottom:none;margin-bottom:0;border-radius:999px;font-size:15px;font-weight:500;padding:9px 18px;transition:background .25s,color .25s;}
+}
+
+/* ---- Version 2 : toute la partie haute colorée ---- */
+:root{--hd:#187a9d;--hd-dark:#11536c;--hd-sand:#e8cba6;}
+.topline{background:var(--hd-dark);color:#cfe6ee;border-bottom:none;}
+.top-rdv{color:#fff;}
+.top-rdv em{color:#a9d0df;}
+.top-search>.ic{color:rgba(255,255,255,.7);}
+.topline .top-search input{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);color:#fff;}
+.topline .top-search input::placeholder{color:rgba(255,255,255,.7);opacity:1;}
+.topline .top-search input:focus{background:rgba(255,255,255,.2);border-color:#fff;}
+.topline-info a{color:#fff;}
+.topline-info a:hover{color:var(--hd-sand);}
+body.is-scrolled .topline{box-shadow:none;}
+.brand-row{background:var(--hd);}
+.brand::before{background:#fff;color:var(--hd);}
+.brand-name{color:#fff;}
+.brand-sub{color:var(--hd-sand);}
+.sticky-nav{background:var(--hd);box-shadow:none;border-bottom:3px solid var(--hd-sand);transition:top .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s;}
+body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
+.nav-bar{background:transparent;border-bottom:none;}
+.nav-bar button{color:#e1f1f7;}
+.nav-bar button:hover{background:rgba(255,255,255,.14);color:#fff;border-bottom-color:transparent;}
+.nav-bar button.active{background:#fff;color:#126582;font-weight:600;border-bottom-color:transparent;}
+@media (min-width: 861px){
+  .nav-bar{padding:6px clamp(20px,4vw,56px) 14px;}
+  body.is-scrolled .nav-bar{padding-top:10px;padding-bottom:10px;}
+}
+@media (max-width: 860px){
+  .brand-row{background:var(--hd);box-shadow:none;}
+  .burger span{background:#fff;}
+  .m-search{color:#fff;}
+  body.search-open .m-search{color:var(--hd-sand);}
+  .brand-row .header-rdv{background:#fff;color:#126582;}
+  .sticky-nav{background:var(--hd-dark);border-bottom:none;}
+  .nav-bar{background:var(--hd-dark);}
+  .nav-bar button{color:rgba(255,255,255,.82);}
+  .nav-bar button.active{background:rgba(255,255,255,.12);border-left-color:var(--hd-sand);color:#fff;}
+  body.search-open .topline{background:#fff;}
+  body.search-open .topline .top-search input{background:#f4f7f8;border:1px solid var(--border);color:var(--text);}
+  body.search-open .topline .top-search input::placeholder{color:var(--muted);}
+  body.search-open .top-search>.ic{color:var(--muted);}
+}
+
+/* ---- Version finale : sans cercle IG, accueil plus compact ---- */
+.brand::before{content:none;display:none;}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:3px;}
+@media (min-width: 861px){
+  .brand{align-items:center;text-align:center;}
+  .brand-name{font-size:2.15em;}
+  .brand-row{padding:18px clamp(20px,4vw,56px) 10px;}
+}
+@media (max-width: 860px){
+  .brand-row .brand{flex-direction:row;align-items:center;}
+}
+
+/* Bandeau d'accueil compact */
+#page-accueil{padding-top:28px;}
+.home-banner{margin-bottom:0;}
+.home-section-label{margin:36px 0 20px;}
+@media (min-width: 861px){
+  .home-banner{grid-template-columns:.8fr 1.2fr;}
+  .home-banner-media{min-height:0;height:auto;}
+  .home-banner-media img{height:100%;object-position:center 45%;}
+  .home-banner-text{padding:30px 42px 30px;}
+  .home-banner-text h2{font-size:1.4em;margin-bottom:10px;}
+  .home-banner-text p{font-size:.97em;line-height:1.7;}
+  .home-banner .eyebrow{margin-bottom:6px;}
+  .home-banner .convention-strip{margin-top:14px;}
+  .home-banner .rdv-btn{margin-top:14px;padding:11px 22px;}
+}
+@media (max-width: 860px){
+  #page-accueil{padding-top:16px;}
+  .home-banner-media{height:170px;}
+  .home-banner-media img{object-position:center 45%;}
+  .home-banner-text{padding:20px 18px 22px;}
+  .home-section-label{margin:28px 0 16px;}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<!-- STICKY TOP : bandeau RDV (collé au sommet en permanence) -->
-<div class="sticky-top">
-  <div class="top-bar">
-    <a class="rdv-link" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">
-      <svg class="rdv-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Prendre RDV en ligne — Doctolib
-    </a>
-    <div class="top-search">
-      <input type="text" id="search-input" placeholder="Rechercher sur le site…" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')doSearch(this.value)">
-    </div>
-    <div class="addr-wrap">
-      <svg class="addr-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-      21 rue Chevert, 75007 Paris
-    </div>
+<!-- BANDE DU HAUT (fixe au défilement) : rendez-vous, recherche, adresse -->
+<div class="topline" id="topline">
+  <a class="top-rdv" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Prendre RDV en ligne</span><em>Doctolib</em></a>
+  <div class="top-search">
+    <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    <input type="text" id="search-input" placeholder="Rechercher sur le site…" autocomplete="off" oninput="doSearch(this.value)" onkeydown="if(event.key==='Enter')doSearch(this.value)">
+    <div class="search-results" id="search-results"></div>
   </div>
-  <div class="search-results" id="search-results"></div>
-</div>
-
-<!-- HEADER : Isabelle Goupil (disparaît au scroll) -->
-<div class="hero-header">
-  <div class="hero-header-inner">
-    <div class="hero-header-text">
-      <h1>Isabelle Goupil</h1>
-      <div class="subtitle">Sage-Femme &nbsp;·&nbsp; Conventionnée</div>
-    </div>
+  <div class="topline-info">
+    <span class="addr"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
+    <a class="tel" href="tel:+33699356875">06 99 35 68 75</a>
   </div>
 </div>
 
-<!-- STICKY NAV : barre de navigation (collée après le bandeau RDV) -->
+<!-- EN-TÊTE : nom (disparaît au défilement) -->
+<div class="brand-row">
+  <button class="burger" type="button" aria-label="Ouvrir le menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  <a class="brand" href="#" onclick="goHome();return false;">
+    <span class="brand-name">Isabelle Goupil</span>
+    <span class="brand-sub">Sage-femme conventionnée · Paris 7<sup>e</sup></span>
+  </a>
+  <button class="m-search" type="button" aria-label="Rechercher sur le site" onclick="toggleSearch()"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg></button>
+  <a class="header-rdv" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank" rel="noopener"><span class="rdv-long">Prendre rendez-vous</span><span class="rdv-short">Rendez-vous</span></a>
+</div>
+
+<!-- NAVIGATION (collée sous la bande du haut ; menu déroulant sur mobile) -->
 <div class="sticky-nav">
   <nav class="nav-bar">
     <button class="active" onclick="showPage('accueil',this)">Accueil</button>
@@ -726,49 +1058,56 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
     <button onclick="showPage('grossesse',this)">Grossesse &amp; Post-natal</button>
     <button onclick="showPage('bilans',this)">Bilans de prévention &amp; Vaccins</button>
   </nav>
+  <div class="menu-info">
+    <span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>21 rue Chevert, 75007 Paris</span>
+    <a href="tel:+33699356875">06 99 35 68 75</a>
+  </div>
 </div>
+<div class="menu-veil" onclick="toggleMenu(false)"></div>
 
 <!-- ===== PAGE 1 : ACCUEIL ===== -->
 <div class="page active" id="page-accueil">
-  <div class="home-hero scroll-reveal">
-    <div class="home-hero-text">
+  <section class="home-banner">
+    <div class="home-banner-media"><img src="docs/accueil_hero.jpg" alt="Isabelle Goupil, sage-femme, en consultation"></div>
+    <div class="home-banner-text scroll-reveal">
+      <p class="eyebrow">Sage-femme à Paris 7<sup>e</sup></p>
       <h2>Consultation de contraception &amp; suivi gynécologique</h2>
       <p>Isabelle Goupil, sage-femme conventionnée à Paris 7<sup>e</sup>, vous accompagne tout au long de votre vie gynécologique — de la première consultation à la ménopause, en passant par la grossesse et le post-natal.</p>
-      <div class="convention-strip"><span>✓</span> Conventionnée &nbsp;·&nbsp; Carte Vitale acceptée</div><br>
-      <a class="rdv-btn" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">Prendre rendez-vous sur Doctolib</a>
+      <div class="convention-strip"><span>✓</span> Conventionnée &nbsp;·&nbsp; Carte Vitale acceptée</div>
+      <a class="rdv-btn" href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank" rel="noopener">Prendre rendez-vous sur Doctolib</a>
     </div>
-    <img class="home-img" src="docs/Image_page_accueil.png" alt="Consultation sage-femme" onerror="this.style.background='#e8f0e9';this.style.minHeight='270px';">
-  </div>
-  <div class="home-section-label scroll-reveal delay-1">Mes consultations</div>
-  <div class="home-services scroll-reveal delay-2">
-    <div class="home-card gyneco" onclick="this.classList.toggle('open')">
+  </section>
+  <div class="home-section-label scroll-reveal">Mes consultations</div>
+  <div class="home-services">
+    <div class="home-card gyneco scroll-reveal" onclick="this.classList.toggle('open')">
+      <div class="home-card-media" aria-hidden="true"></div>
       <div class="home-card-header">
         <h3>Suivi gynécologique</h3>
-        <div class="card-hint">↓ Cliquer pour les détails</div>
+        <div class="card-hint">En savoir plus</div>
       </div>
       <div class="home-card-body"><p>Contraception, dépistages, infections, IST, douleurs pelviennes et périnéales, pré-ménopause, vaginisme</p></div>
     </div>
-    <div class="home-card grossesse" onclick="this.classList.toggle('open')">
+    <div class="home-card grossesse scroll-reveal delay-1" onclick="this.classList.toggle('open')">
+      <div class="home-card-media" aria-hidden="true"></div>
       <div class="home-card-header">
         <h3>Suivi de grossesse</h3>
-        <div class="card-hint">↓ Cliquer pour les détails</div>
+        <div class="card-hint">En savoir plus</div>
       </div>
-      <div class="home-card-body">
-        <p><strong>Prénatal :</strong> Bilan préconceptionnel, suivi mensuel, entretien prénatal, préparation à la naissance, monitoring.<br><br>
-        <strong>Post-natal :</strong> Visite à domicile, soutien à l'allaitement, consultation &amp; entretien post-natals, rééducation périnéale.</p>
-      </div>
+      <div class="home-card-body"><p><strong>Prénatal :</strong> Bilan préconceptionnel, suivi mensuel, entretien prénatal, préparation à la naissance, monitoring.<br><br><strong>Post-natal :</strong> Visite à domicile, soutien à l'allaitement, consultation &amp; entretien post-natals, rééducation périnéale.</p></div>
     </div>
-    <div class="home-card bilans" onclick="this.classList.toggle('open')">
+    <div class="home-card bilans scroll-reveal delay-2" onclick="this.classList.toggle('open')">
+      <div class="home-card-media" aria-hidden="true"></div>
       <div class="home-card-header">
         <h3>Bilans de prévention &amp; Vaccins</h3>
-        <div class="card-hint">↓ Cliquer pour les détails</div>
+        <div class="card-hint">En savoir plus</div>
       </div>
       <div class="home-card-body"><p>Bilan de santé global pour les 18-25 ans et les 45-50 ans.<br>Prescription et injection des vaccins à tout âge.</p></div>
     </div>
-    <div class="home-card hommes" onclick="this.classList.toggle('open')">
+    <div class="home-card hommes scroll-reveal delay-3" onclick="this.classList.toggle('open')">
+      <div class="home-card-media" aria-hidden="true"></div>
       <div class="home-card-header">
         <h3>Pour les hommes</h3>
-        <div class="card-hint">↓ Cliquer pour les détails</div>
+        <div class="card-hint">En savoir plus</div>
       </div>
       <div class="home-card-body"><p>Information et prescription vaccins, dépistage des IST, accompagnement dans les différents rendez-vous autour d'une grossesse.</p></div>
     </div>
@@ -778,7 +1117,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 <!-- ===== PAGE 2 : FORMATION ===== -->
 <div class="page" id="page-formation">
   <h2 class="page-title">Formation &amp; parcours</h2>
-  <p style="font-family:sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:28px;">Cliquez sur les points pour afficher les détails.</p>
+  <p style="font-family:var(--f-body);font-size:13px;color:var(--muted);font-style:italic;margin-bottom:28px;">Cliquez sur les points pour afficher les détails.</p>
 
   <!-- FRISE 1 : Expériences -->
   <div class="tl-category exp-cat scroll-reveal">
@@ -935,7 +1274,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
     <div class="cab-left">
       <div class="info-block">
         <div class="block-label">Adresse</div>
-        <p style="font-family:sans-serif;font-size:14px;line-height:1.9;color:var(--text);">21 rue Chevert<br>75007 Paris</p>
+        <p style="font-family:var(--f-body);font-size:14px;line-height:1.9;color:var(--text);">21 rue Chevert<br>75007 Paris</p>
       </div>
       <div class="info-block">
         <div class="block-label">Comment venir ?</div>
@@ -976,7 +1315,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
       </div>
     </div>
   </div>
-  <h3 style="font-family:sans-serif;font-size:10.5px;color:#555;letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700;" class="scroll-reveal">Photos du cabinet</h3>
+  <h3 style="font-family:var(--f-body);font-size:10.5px;color:#555;letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px;font-weight:700;" class="scroll-reveal">Photos du cabinet</h3>
   <div class="photos-grid scroll-reveal delay-1">
     <div class="photo-item">
       <img class="cabinet-photo" src="docs/photo_cabinet_entree.jpeg" alt="Entrée" onerror="this.style.background='#e8f0e9';">
@@ -1029,7 +1368,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 
   <!-- PRÉNATAL -->
   <div class="section-label pre">Prénatal</div>
-  <p style="font-family:sans-serif;font-size:12.5px;color:var(--muted);margin-bottom:14px;font-style:italic;">Cliquez sur chaque carte pour afficher le détail.</p>
+  <p style="font-family:var(--f-body);font-size:12.5px;color:var(--muted);margin-bottom:14px;font-style:italic;">Cliquez sur chaque carte pour afficher le détail.</p>
   <div class="grossesse-grid">
     <div class="gc-wrap">
       <div class="gc-face c1" onclick="toggleCard(this)">
@@ -1104,7 +1443,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   <div class="pn-steps scroll-reveal delay-1" style="margin-top:12px;">
     <div class="pn-step s1">
       <div class="pn-num">1</div>
-      <div><h3>Visite à domicile</h3><p class="pn-zone">7e, 15e et arrondissements limitrophes</p><p>Une visite à domicile la 2e semaine après la naissance, pour les patientes suivies.</p></div>
+      <div><h3>Visite à domicile</h3><p class="pn-zone">7e, 15e et arrondissements limitrophes</p><p>Une visite à domicile après la naissance.</p></div>
     </div>
     <div class="pn-step s2">
       <div class="pn-num">2</div>
@@ -1132,7 +1471,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
 
   <!-- Bilans -->
   <div class="bilan-section-title">Bilans de prévention</div>
-  <p style="font-family:sans-serif;font-size:13px;color:var(--muted);font-style:italic;margin-bottom:18px;">Je pratique exclusivement les bilans correspondant aux tranches d'âge <strong>18–25 ans</strong> et <strong>45–50 ans</strong>.</p>
+  <p style="font-family:var(--f-body);font-size:13px;color:var(--muted);font-style:italic;margin-bottom:18px;">Je pratique exclusivement les bilans correspondant aux tranches d'âge <strong>18–25 ans</strong> et <strong>45–50 ans</strong>.</p>
   <div class="bilans-strips">
     <div class="bilan-strip">
       <div class="bilan-strip-age">
@@ -1146,7 +1485,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         </div>
         <div class="bilan-strip-links">
           <a href="docs/MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
-          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--green);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
     </div>
@@ -1162,7 +1501,7 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
         </div>
         <div class="bilan-strip-links">
           <a href="docs/MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
-          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--sage);color:#fff;">Ameli.fr →</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--green);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
     </div>
@@ -1173,19 +1512,19 @@ mark.search-highlight{background:#fff176;color:inherit;border-radius:2px;padding
   <!-- Vaccinations -->
   <div class="bilan-section-title scroll-reveal">Vaccinations</div>
   <div class="vacc-section scroll-reveal delay-1">
-    <p style="font-family:sans-serif;font-size:13px;color:var(--muted);margin-bottom:16px;text-align:justify;">Je peux prescrire et administrer les vaccins recommandés dans le cadre du suivi gynécologique et des bilans de prévention.</p>
+    <p style="font-family:var(--f-body);font-size:13px;color:var(--muted);margin-bottom:16px;text-align:justify;">Je peux prescrire et administrer les vaccins recommandés dans le cadre du suivi gynécologique et des bilans de prévention.</p>
     <table class="vacc-table">
       <thead>
-        <tr><th>Vaccin</th><th>Indication principale</th><th>Population concernée</th></tr>
+        <tr><th>Vaccin</th><th>Indication principale</th><th>Personnes concernées</th></tr>
       </thead>
       <tbody>
-        <tr><td>HPV</td><td data-label="Indication">Prévention des cancers du col de l'utérus</td><td data-label="Population">11 - 26 ans</td></tr>
-        <tr><td>Méningocoques ACWY &amp; B</td><td data-label="Indication">Prévention des méningites bactériennes</td><td data-label="Population">Adolescents et jeunes adultes</td></tr>
-        <tr><td>DTPCa</td><td data-label="Indication">Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td data-label="Population">Rappels tout au long de la vie</td></tr>
-        <tr><td>Hépatite B</td><td data-label="Indication">Prévention de l'hépatite B</td><td data-label="Population">Non immunisés, professionnels de santé</td></tr>
-        <tr><td>Grippe</td><td data-label="Indication">Prévention de la grippe saisonnière</td><td data-label="Population">Annuel, personnes à risque et grossesse</td></tr>
-        <tr><td>Rophylac</td><td data-label="Indication">Prévention de l'allo-immunisation rhésus</td><td data-label="Population">Femmes enceintes de groupe Rhésus négatif</td></tr>
-        <tr><td>COVID-19</td><td data-label="Indication">Prévention des formes graves</td><td data-label="Population">Selon recommandations en vigueur</td></tr>
+        <tr><td>HPV</td><td data-label="Indication">Prévention des cancers du col de l'utérus</td><td data-label="Personnes concernées">11 - 26 ans</td></tr>
+        <tr><td>Méningocoques ACWY &amp; B</td><td data-label="Indication">Prévention des méningites bactériennes</td><td data-label="Personnes concernées">Adolescents et jeunes adultes</td></tr>
+        <tr><td>DTPCa</td><td data-label="Indication">Diphtérie, Tétanos, Poliomyélite, Coqueluche</td><td data-label="Personnes concernées">Rappels tout au long de la vie</td></tr>
+        <tr><td>Hépatite B</td><td data-label="Indication">Prévention de l'hépatite B</td><td data-label="Personnes concernées">Non immunisés, professionnels de santé</td></tr>
+        <tr><td>Grippe</td><td data-label="Indication">Prévention de la grippe saisonnière</td><td data-label="Personnes concernées">Annuel, personnes à risque et grossesse</td></tr>
+        <tr><td>Rophylac</td><td data-label="Indication">Prévention de l'allo-immunisation rhésus</td><td data-label="Personnes concernées">Femmes enceintes de groupe Rhésus négatif</td></tr>
+        <tr><td>COVID-19</td><td data-label="Indication">Prévention des formes graves</td><td data-label="Personnes concernées">Selon recommandations en vigueur</td></tr>
       </tbody>
     </table>
     <p class="vacc-note">Les recommandations vaccinales évoluent. Consultez <a href="https://www.ameli.fr" target="_blank" style="color:var(--accent1)">ameli.fr</a> ou le calendrier vaccinal officiel pour les dernières mises à jour.</p>
@@ -1421,7 +1760,7 @@ function doSearch(val) {
 
   res.innerHTML = hits.length
     ? hits.map(h => `<div class="sr-item" onclick="goPage('${h.id}', '${q}')">→ ${h.label}</div>`).join('')
-    : `<div style="color:var(--muted);font-family:sans-serif;font-size:13px;">Aucun résultat pour « ${val} »</div>`;
+    : `<div style="color:var(--muted);font-family:var(--f-body);font-size:13px;">Aucun résultat pour « ${val} »</div>`;
   res.style.display = 'block';
 }
 
@@ -1630,6 +1969,56 @@ function refuseCookies() {
     clearTimeout(resetTimer);
     resetTimer = setTimeout(resetZoom, 150);
   });
+})();
+
+/* =============================================
+   MENU, RECHERCHE ET BANDE FIXE (mobile + ordinateur)
+   ============================================= */
+function toggleMenu(force) {
+  var open = document.body.classList.toggle('menu-open', force);
+  if (open) document.body.classList.remove('search-open');
+}
+function toggleSearch(force) {
+  var open = document.body.classList.toggle('search-open', force);
+  if (open) {
+    document.body.classList.remove('menu-open');
+    var i = document.getElementById('search-input');
+    if (i) setTimeout(function() { i.focus(); }, 50);
+  } else {
+    var r = document.getElementById('search-results');
+    if (r) r.style.display = 'none';
+  }
+}
+document.querySelectorAll('.nav-bar button').forEach(function(b) {
+  b.addEventListener('click', function() { toggleMenu(false); });
+});
+function goHome() {
+  showPage('accueil', document.querySelector('.nav-bar button'));
+  toggleMenu(false);
+}
+var _goPage = goPage;
+goPage = function() { _goPage.apply(this, arguments); toggleSearch(false); };
+
+/* Bande du haut : s'affine quand on descend */
+(function() {
+  var ticking = false;
+  function update() {
+    ticking = false;
+    var y = window.scrollY;
+    var b = document.body.classList;
+    if (y > 70) b.add('is-scrolled'); else if (y < 20) b.remove('is-scrolled');
+  }
+  window.addEventListener('scroll', function() {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, {passive: true});
+  update();
+  function brandH() {
+    var r = document.querySelector('.brand-row');
+    if (r) document.documentElement.style.setProperty('--brand-h', r.offsetHeight + 'px');
+  }
+  window.addEventListener('resize', brandH);
+  window.addEventListener('load', brandH);
+  brandH();
 })();
 </script>
 
