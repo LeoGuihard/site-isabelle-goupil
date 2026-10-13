@@ -1087,6 +1087,16 @@ body.is-scrolled .sticky-nav{box-shadow:0 10px 22px rgba(14,40,52,.18);}
 .home-card:not(.open) .card-link{visibility:hidden;}
 .home-card{background:#fff;}
 .home-card-media{background-color:var(--navy);}
+
+/* ===== C11 : le nom « Isabelle Goupil » n'est jamais coupé sur téléphone ===== */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+@media (max-width: 860px){
+  .brand-row .brand{flex:1 1 auto;min-width:min-content;}
+  .brand-row .brand-name{white-space:normal;overflow:visible;text-overflow:clip;font-size:clamp(15px,4.3vw,17.6px);line-height:1.12;}
+}
+@media (max-width: 340px){
+  .brand-row .header-rdv{padding:8px 10px !important;font-size:12px !important;}
+}
 </style>
 </head>
 <body>
