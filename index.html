@@ -1097,6 +1097,33 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 @media (max-width: 340px){
   .brand-row .header-rdv{padding:8px 10px !important;font-size:12px !important;}
 }
+
+/* ===== C12 : en-tête plus compact + page Formation sans saut de hauteur au survol ===== */
+@media (min-width: 861px){
+  :root{--tl-h:36px;}
+  body.is-scrolled{--tl-h:30px;}
+  .topline .top-search input{height:26px;font-size:12.5px;}
+  body.is-scrolled .topline .top-search input{height:22px;}
+  .top-rdv{font-size:12.5px;}
+  .topline-info{font-size:12.5px;gap:16px;}
+  .brand-row{padding:10px clamp(20px,4vw,56px) 6px;}
+  .brand-name{font-size:1.7em;}
+  .brand{gap:1px;row-gap:1px;}
+  .brand-sub{font-size:12.5px;}
+  .nav-bar{padding:4px clamp(20px,4vw,56px) 9px;}
+  body.is-scrolled .nav-bar{padding-top:6px;padding-bottom:6px;}
+  .nav-bar button{padding:6px 16px;font-size:14px;}
+  .sticky-nav{border-bottom-width:2px;}
+
+  /* Frise Formation : l'infobulle se superpose au contenu au lieu d'agrandir la zone (aucun changement de hauteur) */
+  .tl-category{position:relative;}
+  .tl-category:hover,.tl-category:focus-within,.tl-category:has(.tl-node.open){z-index:30;}
+  .tl-node-tip{display:block;visibility:hidden;opacity:0;transition:opacity .18s;position:absolute;top:100%;margin-top:3px;}
+  .tl-node:hover .tl-node-tip,.tl-node.open .tl-node-tip{visibility:visible;opacity:1;}
+}
+@media (max-width: 860px){
+  .brand-row{padding-top:7px !important;padding-bottom:7px !important;}
+}
 </style>
 </head>
 <body>
