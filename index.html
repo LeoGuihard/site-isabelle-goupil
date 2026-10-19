@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
 <meta name="google-site-verification" content="EaJxoCCtiZ4vTzZtS2JBBfyW6_cSKPJgnhRqMzBJkp8" />
 <!-- SEO & Référencement -->
 <meta name="description" content="Isabelle Goupil, Sage-Femme conventionnée Paris 7e et Paris 15e. Suivi gynécologique, grossesse, postnatal, préparation à la naissance, bilans de prévention, vaccination. 21 rue Chevert, 75007 Paris.">
@@ -57,9 +58,49 @@
 }
 </script>
 <!-- Favicon inline (rose sage-femme) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="docs/polices/libre-baskerville-normal-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="docs/polices/work-sans-normal-variable.woff2" as="font" type="font/woff2" crossorigin>
+<style id="polices-et-chargement">
+/* Polices hébergées sur le site (aucun appel à Google) */
+@font-face{font-family:'Libre Baskerville';font-style:normal;font-weight:400 700;font-display:swap;src:url(docs/polices/libre-baskerville-normal-variable.woff2) format('woff2');}
+@font-face{font-family:'Libre Baskerville';font-style:italic;font-weight:400;font-display:swap;src:url(docs/polices/libre-baskerville-italic-400.woff2) format('woff2');}
+@font-face{font-family:'Work Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url(docs/polices/work-sans-normal-variable.woff2) format('woff2');}
+
+/* Écran de chargement */
+#loader{position:fixed;top:0;right:0;bottom:0;left:0;z-index:10000;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#11536c 0%,#187a9d 100%);color:#fff;transition:opacity .6s ease,visibility 0s linear .6s;animation:ld-failsafe .01s linear 5s forwards;}
+#loader.is-done{opacity:0;visibility:hidden;pointer-events:none;}
+.ld-inner{text-align:center;padding:0 24px;}
+.ld-name{font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(28px,7vw,44px);line-height:1.15;letter-spacing:.01em;animation:ld-up .8s cubic-bezier(.22,.61,.36,1) both;}
+.ld-sub{margin-top:10px;font-family:'Work Sans',system-ui,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#e8cba6;animation:ld-up .8s cubic-bezier(.22,.61,.36,1) .18s both;}
+.ld-sub sup{font-size:.72em;line-height:0;letter-spacing:0;text-transform:none;}
+.ld-track{position:relative;margin:26px auto 0;width:132px;height:2px;border-radius:2px;background:rgba(255,255,255,.26);overflow:hidden;animation:ld-fade .6s ease .4s both;}
+.ld-track span{position:absolute;top:0;left:0;height:100%;width:42%;border-radius:2px;background:#e8cba6;animation:ld-slide 1.5s cubic-bezier(.45,0,.25,1) infinite;}
+@keyframes ld-up{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+@keyframes ld-fade{from{opacity:0;}to{opacity:1;}}
+@keyframes ld-slide{0%{transform:translateX(-100%);}100%{transform:translateX(340%);}}
+@keyframes ld-failsafe{to{opacity:0;visibility:hidden;pointer-events:none;}}
+@media (prefers-reduced-motion:reduce){.ld-name,.ld-sub,.ld-track{animation:none;}.ld-track span{animation:none;width:100%;}}
+@media print{#loader{display:none;}}
+</style>
+<noscript><style>#loader{display:none !important;}</style></noscript>
+<script>
+/* Écran de chargement : masqué quand la page, les images et les polices sont prêtes (900 ms minimum, 4 s maximum) */
+(function(){
+  var t0=Date.now(), done=false, q=[];
+  var calm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.siteReady=function(fn){ if(done){fn();}else{q.push(fn);} };
+  function finish(){
+    if(done) return; done=true;
+    var l=document.getElementById('loader');
+    if(l){ l.classList.add('is-done'); l.setAttribute('aria-hidden','true'); setTimeout(function(){ l.style.display='none'; },700); }
+    q.forEach(function(f){ try{f();}catch(e){} }); q=[];
+  }
+  function afterMin(){ setTimeout(finish, Math.max(0,(calm?300:900)-(Date.now()-t0))); }
+  var loaded=new Promise(function(r){ if(document.readyState==='complete'){r();}else{window.addEventListener('load',r);} });
+  loaded.then(function(){ return document.fonts&&document.fonts.ready; }).then(afterMin,afterMin);
+  setTimeout(finish,4000);
+})();
+</script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a2e49'/><text y='44' x='50%' text-anchor='middle' font-size='36' font-family='Georgia,serif' fill='%23e0a0bc'>♀</text></svg>">
 <link rel="canonical" href="https://isabelle-goupil-sage-femme.fr/">
 <title>Isabelle Goupil — Sage-Femme Paris 7e</title>
@@ -1127,6 +1168,13 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 </style>
 </head>
 <body>
+<div id="loader" role="status" aria-label="Chargement du site">
+  <div class="ld-inner">
+    <div class="ld-name" aria-hidden="true">Isabelle Goupil</div>
+    <div class="ld-sub" aria-hidden="true">Sage-femme · Paris 7<sup>e</sup></div>
+    <div class="ld-track" aria-hidden="true"><span></span></div>
+  </div>
+</div>
 <div class="wrap">
 
 <!-- BANDE DU HAUT (fixe au défilement) : rendez-vous, recherche, adresse -->
@@ -1365,7 +1413,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
     </div>
   </div>
 
-  <a class="ordre-link" href="https://www.ordre-sages-femmes.fr" target="_blank">
+  <a class="ordre-link" href="https://www.ordre-sages-femmes.fr" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
     Ordre National des Sages-Femmes
   </a>
@@ -1460,9 +1508,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
   </div>
   <div class="gyneco-links scroll-reveal" style="margin-top:32px;">
     <h3>Liens utiles</h3>
-    <a href="https://www.onsexprime.fr" target="_blank">onsexprime.fr — Contraception &amp; sexualité</a>
-    <a href="https://www.ameli.fr" target="_blank">ameli.fr — Assurance maladie</a>
-    <a href="https://www.sparadrap.org/boutique/produit/guide-la-premiere-consultation-gynecologique" target="_blank">Guide de la 1ère consultation gynécologique →</a>
+    <a href="https://www.onsexprime.fr" target="_blank" rel="noopener">onsexprime.fr — Contraception &amp; sexualité</a>
+    <a href="https://www.ameli.fr" target="_blank" rel="noopener">ameli.fr — Assurance maladie</a>
+    <a href="https://www.sparadrap.org/boutique/produit/guide-la-premiere-consultation-gynecologique" target="_blank" rel="noopener">Guide de la 1ère consultation gynécologique →</a>
   </div>
 </div>
 
@@ -1582,8 +1630,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
           Première consultation et prévention — auto-questionnaire à apporter le jour du RDV.
         </div>
         <div class="bilan-strip-links">
-          <a href="docs/MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
-          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--green);color:#fff;">Ameli.fr →</a>
+          <a href="docs/MBP-autoquestionnaire-18-25-ans.pdf" target="_blank" rel="noopener" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" rel="noopener" style="background:var(--green);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
     </div>
@@ -1598,8 +1646,8 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
           Bilan de prévention et dépistages adaptés — auto-questionnaire à apporter le jour du RDV.
         </div>
         <div class="bilan-strip-links">
-          <a href="docs/MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
-          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" style="background:var(--green);color:#fff;">Ameli.fr →</a>
+          <a href="docs/MBP-autoquestionnaire-45-50-ans.pdf" target="_blank" rel="noopener" style="background:var(--accent1);color:#fff;">⬇ Questionnaire PDF</a>
+          <a href="https://www.ameli.fr/paris/medecin/sante-prevention/bilan-prevention-ages-cles" target="_blank" rel="noopener" style="background:var(--green);color:#fff;">Ameli.fr →</a>
         </div>
       </div>
     </div>
@@ -1625,7 +1673,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
         <tr><td>COVID-19</td><td data-label="Indication">Prévention des formes graves</td><td data-label="Personnes concernées">Selon recommandations en vigueur</td></tr>
       </tbody>
     </table>
-    <p class="vacc-note">Les recommandations vaccinales évoluent. Consultez <a href="https://www.ameli.fr" target="_blank" style="color:var(--accent1)">ameli.fr</a> ou le calendrier vaccinal officiel pour les dernières mises à jour.</p>
+    <p class="vacc-note">Les recommandations vaccinales évoluent. Consultez <a href="https://www.ameli.fr" target="_blank" rel="noopener" style="color:var(--accent1)">ameli.fr</a> ou le calendrier vaccinal officiel pour les dernières mises à jour.</p>
   </div>
 </div>
 
@@ -1687,7 +1735,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
 
       <h3>Données collectées</h3>
       <p>Ce site vitrine ne collecte aucune donnée personnelle de façon automatique. Aucun formulaire de contact ni outil d'analyse n'est utilisé.<br><br><strong>Google Maps</strong> : la page « Le cabinet » intègre une carte Google Maps, chargée uniquement après votre consentement explicite. En cas d'acceptation, Google peut déposer des cookies de fonctionnement sur votre appareil, soumis à la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--rose);">politique de confidentialité de Google</a>. Vous pouvez refuser ce chargement via la bannière de consentement — un lien externe vers Google Maps vous est alors proposé en remplacement.</p>
-      <p>Les prises de rendez-vous sont réalisées via la plateforme <strong>Doctolib</strong>, soumise à sa propre politique de confidentialité, consultable sur <a href="https://www.doctolib.fr/terms/privacy" target="_blank">doctolib.fr</a>.</p>
+      <p>Les prises de rendez-vous sont réalisées via la plateforme <strong>Doctolib</strong>, soumise à sa propre politique de confidentialité, consultable sur <a href="https://www.doctolib.fr/terms/privacy" target="_blank" rel="noopener">doctolib.fr</a>.</p>
 
       <h3>Données de santé</h3>
       <p>Dans le cadre des consultations, des données de santé à caractère personnel sont collectées et traitées par Isabelle Goupil en tant que professionnelle de santé, dans le strict respect du <strong>secret médical</strong> et du <strong>RGPD (Règlement Général sur la Protection des Données)</strong>.</p>
@@ -1704,7 +1752,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
       → Droit à la limitation du traitement<br>
       → Droit à la portabilité</p>
       <p>Pour exercer ces droits, contactez : <a href="mailto:isabelle.goupil@gmail.com">isabelle.goupil@gmail.com</a></p>
-      <p>En cas de réclamation, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank">cnil.fr</a></p>
+      <p>En cas de réclamation, vous pouvez saisir la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a></p>
 
       <h3>Cookies</h3>
       <p>Ce site n'utilise aucun cookie de traçage, de publicité ou d'analyse. La carte Google Maps intégrée peut déposer des cookies tiers lors de son affichage — vous pouvez les bloquer via les paramètres de votre navigateur.</p>
@@ -1726,11 +1774,11 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
     </div>
     <div class="footer-col">
       <h4>Rendez-vous</h4>
-      <a href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank">Prendre RDV sur Doctolib</a>
+      <a href="https://www.doctolib.fr/sage-femme/paris/isabelle-goupil" target="_blank" rel="noopener">Prendre RDV sur Doctolib</a>
     </div>
     <div class="footer-col">
       <h4>Carte de visite</h4>
-      <a class="cv-dl-btn" href="docs/carte_visite.pdf" target="_blank">📄 Télécharger la carte de visite (PDF)</a>
+      <a class="cv-dl-btn" href="docs/carte_visite.pdf" target="_blank" rel="noopener">📄 Télécharger la carte de visite (PDF)</a>
     </div>
   </div>
   <div class="footer-scroll-hint" id="footerDots">
@@ -1783,7 +1831,7 @@ function showPage(id, btn) {
 // Init au chargement pour la page active
 document.addEventListener('DOMContentLoaded', () => {
   const activePage = document.querySelector('.page.active');
-  if (activePage) initReveal(activePage);
+  if (activePage) (window.siteReady || (f => f()))(() => initReveal(activePage));
 });
 
 /* =============================================
@@ -1856,9 +1904,10 @@ function doSearch(val) {
     if (match) hits.push(page);
   });
 
+  const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   res.innerHTML = hits.length
-    ? hits.map(h => `<div class="sr-item" onclick="goPage('${h.id}', '${q}')">→ ${h.label}</div>`).join('')
-    : `<div style="color:var(--muted);font-family:var(--f-body);font-size:13px;">Aucun résultat pour « ${val} »</div>`;
+    ? hits.map(h => `<div class="sr-item" data-id="${esc(h.id)}" data-q="${esc(q)}" onclick="goPage(this.dataset.id, this.dataset.q)">→ ${esc(h.label)}</div>`).join('')
+    : `<div style="color:var(--muted);font-family:var(--f-body);font-size:13px;">Aucun résultat pour « ${esc(val)} »</div>`;
   res.style.display = 'block';
 }
 
@@ -2122,7 +2171,7 @@ goPage = function() { _goPage.apply(this, arguments); toggleSearch(false); };
 
 <!-- Bandeau consentement cookies -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>Ce site utilise Google Maps pour l'affichage de la carte. En continuant, vous acceptez l'utilisation de cookies tiers. 
+  <p>La carte du cabinet est fournie par Google Maps, qui peut déposer des cookies tiers. Acceptez-vous son affichage ? 
   <a onclick="openModal('modal-confidentialite');return false;" href="#">En savoir plus</a></p>
   <div class="cookie-btns">
     <button class="cookie-btn" onclick="acceptCookies()">J'accepte</button>
